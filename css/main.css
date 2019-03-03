@@ -1,0 +1,322 @@
+body {
+  font-family: "Share Tech Mono", sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  -webkit-transition: background-image 300ms ease-in-out;
+  transition: background-image 300ms ease-in-out;
+  background-image: url("../img/header.png");
+  background-position: top center;
+  -webkit-animation: logo 800ms ease-in;
+          animation: logo 800ms ease-in;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: contain;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 768px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  opacity: .85;
+  height: 50px;
+  width: 100%;
+}
+
+.logo:hover {
+  background-image: url("../img/header-hover.png");
+  opacity: .85;
+}
+
+.logo a {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #2c2c2c;
+  max-width: 768px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  width: 100%;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+header nav ul li:hover {
+  -webkit-animation: navhov 280ms ease-in-out forwards;
+          animation: navhov 280ms ease-in-out forwards;
+  background-color: white;
+}
+
+header nav ul li a {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+header nav ul li a:hover {
+  -webkit-animation: navhov 280ms ease-in-out forwards;
+          animation: navhov 280ms ease-in-out forwards;
+  text-transform: uppercase;
+  color: black;
+}
+
+main {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 748px;
+  padding: 0 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+main #cover {
+  -webkit-animation: cover 850ms forwards ease-in-out;
+          animation: cover 850ms forwards ease-in-out;
+  -webkit-clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+          clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+  background-color: #2c2c2c;
+  position: absolute;
+  max-width: 768px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+main .content {
+  border: 4px solid #2c2c2c;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  word-spacing: .06em;
+  margin-bottom: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  width: 100%;
+}
+
+main .heading {
+  text-shadow: -2px 2px black;
+  background-color: #2c2c2c;
+  border: 4px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 8px 0 8px 4px;
+  word-spacing: .06em;
+  line-height: 1.3em;
+  margin-right: auto;
+  min-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .7em;
+  color: white;
+}
+
+main .img {
+  border: 4px solid #2c2c2c;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+main .space {
+  height: 100px;
+  width: 768px;
+}
+
+.tag {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8px 0 8px 0;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tag a {
+  -webkit-transition: color, background-color 300ms ease-in-out;
+  transition: color, background-color 300ms ease-in-out;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: black;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+  text-align: center;
+  margin-left: 4px;
+  cursor: pointer;
+  padding: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.tag a:hover {
+  background-color: white;
+  color: #2c2c2c;
+}
+
+@media all {
+  a {
+    font-size: .8em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  a {
+    font-size: 1em;
+  }
+  .logo {
+    height: 70px;
+  }
+}
+
+@-webkit-keyframes navhov {
+  0% {
+    height: 50px;
+    opacity: 0;
+  }
+  10%,
+  30% {
+    height: 60px;
+  }
+  75% {
+    height: 45px;
+  }
+  100% {
+    height: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes navhov {
+  0% {
+    height: 50px;
+    opacity: 0;
+  }
+  10%,
+  30% {
+    height: 60px;
+  }
+  75% {
+    height: 45px;
+  }
+  100% {
+    height: 50px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes logo {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+  }
+}
+
+@keyframes logo {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes cover {
+  0% {
+    height: 1px;
+  }
+  100% {
+  }
+}
+
+@keyframes cover {
+  0% {
+    height: 1px;
+  }
+  100% {
+  }
+}
+/*# sourceMappingURL=main.css.map */
