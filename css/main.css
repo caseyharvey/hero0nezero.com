@@ -233,6 +233,33 @@ main .space {
   color: #2c2c2c;
 }
 
+.links {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 100%;
+}
+
+.links a {
+  height: 100%;
+}
+
+.links a img {
+  height: 100%;
+}
+
+.links a img:hover {
+  -webkit-animation: links 250ms ease-in-out forwards;
+          animation: links 250ms ease-in-out forwards;
+}
+
 @media all {
   a {
     font-size: .8em;
@@ -315,6 +342,32 @@ main .space {
 @keyframes cover {
   0% {
     height: 1px;
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes links {
+  0% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+  63% {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
+  100% {
+  }
+}
+
+@keyframes links {
+  0% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+  63% {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
   }
   100% {
   }

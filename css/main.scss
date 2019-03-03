@@ -204,6 +204,27 @@ main {
     }
 }
 
+.links {
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;  
+    height: 30px;
+    width: 100%;
+
+    a {
+        height: 100%;
+
+        img {
+            height: 100%;
+
+            &:hover {
+                animation: links 250ms ease-in-out forwards;
+            }
+        }
+    }
+    
+}
+
 
 
 // media queries
@@ -261,6 +282,18 @@ main {
 @keyframes cover {
     0% {
         height: 1px;
+    }
+
+    100% {}
+}
+
+@keyframes links {
+    0% {
+        transform: translateY(3px);
+    }
+
+    63% {
+        transform: translateY(-1px);
     }
 
     100% {}
