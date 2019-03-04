@@ -145,7 +145,6 @@ main .content {
           box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   word-spacing: .06em;
-  margin-bottom: 8px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -203,8 +202,6 @@ main .space {
 }
 
 .pro a img {
-  -webkit-filter: grayscale(100%) blur(2px);
-          filter: grayscale(100%) blur(2px);
   border: 4px solid #2c2c2c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -213,8 +210,8 @@ main .space {
 }
 
 .pro a img:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  -webkit-filter: grayscale(100%) blur(2px);
+          filter: grayscale(100%) blur(2px);
 }
 
 .tag {
