@@ -205,14 +205,16 @@ main {
 }
 
 .links {
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    margin: 1em 0;
     display: flex;  
     height: 30px;
     width: 100%;
 
     a {
         height: 100%;
+        padding: 1em 2em;
 
         img {
             height: 100%;
