@@ -26,10 +26,10 @@
     <header class=" ">
         <nav class=" ">
             <ul class=" ">
-                <li><a href="">projects</a></li>
-                <li><a href="">workshop</a></li>
-                <li><a href="">zeroblog</a></li>
-                <li><a href="">connect</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="workshop.html">workshop</a></li>
+                <!-- <li><a href="">zeroblog</a></li> -->
+                <li><a href="contact.html">contact</a></li>
             </ul>
         </nav>
     </header>
@@ -38,11 +38,34 @@
         <!-- dynamic background image -->
         <div id="cover"></div>
         <!-- heading -->
-        <div class="heading">
-            project 1
+        <div class="head">
+            <div class="heading">
+                contact
+            </div>
         </div>
+
+        <!-- links to relivant accounts -->
+        <div class="links">
+            <a href="https://www.codewars.com/users/hero0nezero" target="_blank"><img src="img/icons/cw.png" alt="codewars icon"></a>
+            <a href="https://github.com/hero0nezero" target="_blank"><img src="img/icons/gh.png" alt="github icon"></a>
+            <a href="https://stackoverflow.com/users/10593964/hero0nezero" target="_blank"><img src="img/icons/so.png"
+                    alt="stack overflow icon"></a>
+        </div>
+
+        <form action="https://formspree.io/caseyharvey1@gmail.com" method="POST" class="contact">
+
+            <input type="email" class="emailtxt" placeholder="your-email@example.com">
+
+            <textarea class="subtxt" rows="1" placeholder="subject"></textarea>
+
+            <textarea class="msgtxt" rows="6" placeholder="message"></textarea>
+
+            <button type="submit" value="Send" class="btn">submit</button>
+        </form>
+
+
         <!-- text content -->
-        <div class="content">
+        <!-- <div class="content">
             debitis dolor mollitia id recusandae amet hic, beatae corporis voluptatibus est perspiciatis soluta vero
             nemo iste dolorum, esse repellat labore veniam reprehenderit? Esse numquam harum pariatur praesentium
             Lorem ipsum dolor sit, amet consectetur <br>
@@ -50,9 +73,9 @@
             debitis dolor mollitia id recusandae amet hic, beatae corporis voluptatibus est perspiciatis soluta vero
             nemo iste dolorum, esse repellat labore veniam reprehenderit? Esse numquam harum pariatur praesentium
             itaque enim vel fugiat cupiditate, delectus a
-        </div>
+        </div> -->
         <!-- prism text editor section -->
-        <pre class="code"><code class="language-js">
+        <!-- <pre class="code"><code class="language-js">
 function orderWeight(str) {
 let arr = [];
 if (str.length > 0) {
@@ -61,24 +84,20 @@ for (let i = 0; i < arr.length; i++) {
     arr[i]=[sum(arr[i].split('')), arr[i]]; 
     } 
 }
-</code></pre>
+</code></pre> -->
+
         <!-- image -->
-        <img src="img/head-logo.png" class="img" alt="">
-        <!-- links -->
-        <div class="tag"><a href="http://www.trezonaconsultinggroup.com/" target="_blank">trezona consulting group</a></div>
+        <!-- <img src="img/head-logo.png" class="img" alt=""> -->
+
+
+        <!-- links to projects-->
+        <!-- <div class="tag"><a href="http://www.trezonaconsultinggroup.com/" target="_blank">trezona consulting group</a></div> -->
         <!-- text content -->
-        <div class="content">
+        <!-- <div class="content">
             This website was my created using bootstrap, animate css and google fonts.
-        </div>
+        </div> -->
+
         <!-- spacer for dynamic background positioning -->
-
-
-        <div class="links">
-            <a href="https://www.codewars.com/users/hero0nezero" target="_blank"><img src="img/icons/cw.png" alt="codewars icon"></a>
-            <a href="https://github.com/hero0nezero" target="_blank"><img src="img/icons/gh.png" alt="github icon"></a>
-            <a href="https://stackoverflow.com/users/10593964/hero0nezero" target="_blank"><img src="img/icons/so.png"
-                    alt="stack overflow icon"></a>
-        </div>
         <div class="space"></div>
     </main>
 

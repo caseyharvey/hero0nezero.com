@@ -145,6 +145,7 @@ main .content {
           box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   word-spacing: .06em;
+  font-size: .8em;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -197,21 +198,16 @@ main .space {
   width: 768px;
 }
 
-.pro {
+.preview {
   width: 100%;
 }
 
-.pro a img {
+.preview a video {
   border: 4px solid #2c2c2c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 8px;
   width: 100%;
-}
-
-.pro a img:hover {
-  -webkit-filter: grayscale(100%) blur(2px);
-          filter: grayscale(100%) blur(2px);
 }
 
 .tag {
@@ -221,7 +217,7 @@ main .space {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 15px 0 8px 0;
+  margin: 15px 0 0 0;
   margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,8 +279,8 @@ main .space {
 }
 
 .links a img:hover {
-  -webkit-animation: links 250ms ease-in-out forwards;
-          animation: links 250ms ease-in-out forwards;
+  -webkit-filter: invert(50%);
+          filter: invert(50%);
 }
 
 .contact {
@@ -306,6 +302,7 @@ main .space {
 }
 
 .contact .emailtxt {
+  font-size: 1em;
   font-family: "Share Tech Mono", sans-serif;
   background-color: #ebebeb;
   border-radius: 0px;
@@ -325,6 +322,7 @@ main .space {
 }
 
 .contact .subtxt {
+  font-size: 1em;
   font-family: "Share Tech Mono", sans-serif;
   background-color: #ebebeb;
   border-radius: 0px;
@@ -345,6 +343,7 @@ main .space {
 }
 
 .contact .msgtxt {
+  font-size: 1em;
   font-family: "Share Tech Mono", sans-serif;
   background-color: #ebebeb;
   border-radius: 0px;
@@ -365,6 +364,7 @@ main .space {
 }
 
 .contact .btn {
+  font-size: 1em;
   background-color: white;
   font-family: "Share Tech Mono", sans-serif;
   border-radius: 0px;
@@ -464,32 +464,6 @@ main .space {
 @keyframes cover {
   0% {
     height: 1px;
-  }
-  100% {
-  }
-}
-
-@-webkit-keyframes links {
-  0% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
-  }
-  63% {
-    -webkit-transform: translateY(-1px);
-            transform: translateY(-1px);
-  }
-  100% {
-  }
-}
-
-@keyframes links {
-  0% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
-  }
-  63% {
-    -webkit-transform: translateY(-1px);
-            transform: translateY(-1px);
   }
   100% {
   }
