@@ -1,0 +1,235 @@
+// photos of port macquarie
+
+// html {
+//     background: url(img2/img2.jpeg) no-repeat center center fixed;
+//     background-size: cover;
+// }
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+
+
+    .cover2 {
+        overflow: auto;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(../img2/1.jpeg);
+        // transition: background-image 500ms ease-in-out;
+
+    }
+
+
+    // black backdrop fade intro
+    #fade {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 1 !important;
+        background-color: black;
+        opacity: 0;
+        animation: fader 3500ms ease-in-out forwards;
+    }
+
+
+
+}
+
+#button1 {
+    top: 46%;
+    left: 0;
+    width: 1rem;
+    height: 7rem;
+    position: fixed;
+    margin-left: 1rem;
+    z-index: 2 !important;
+    transform-origin: center;
+    animation: button 4700ms ease-in-out forwards;
+    background-color: rgba(255, 255, 255, 0.2);
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+#button2 {
+    top: 46%;
+    right: 0;
+    width: 1rem;
+    height: 7rem;
+    position: fixed;
+    margin-right: 1rem;
+    z-index: 2 !important;
+    transform-origin: center;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    animation: button 4700ms ease-in-out forwards;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 2 !important;
+    justify-content: center;
+
+    // main title text
+    h1 {
+        opacity: 0.6;
+        color: white;
+        font-size: 1.8rem;
+        font-family: "Montserrat", sans-serif;
+        animation: text 4000ms ease-in-out forwards;
+    }
+
+    // intro animation text
+    #fadetxt {
+        top: 46%;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        text-align: center;
+        z-index:  !important;
+        transform-origin: center;
+
+        h1 {
+
+            color: white;
+            font-size: 1.8rem;
+            font-family: "Montserrat", sans-serif;
+            animation: fadetxt 3500ms ease-in forwards;
+        }
+    }
+
+}
+
+#right {
+    top:40vh;
+    right: 0;
+    width: 50%;
+    height: 20%;
+    z-index: 100;
+    position: absolute;
+    // background-color: rgba(0, 195, 255, 0.089);
+}
+
+#left {
+    top:40vh;
+    left: 0;
+    width: 50%;
+    height: 20%;
+    z-index: 100;
+    position: absolute;
+    // background-color: rgba(255, 0, 0, 0.096);
+}
+
+.animate {
+    animation: change 500ms ease-in alternate;
+}
+
+
+
+@keyframes fader {
+    0% {
+        opacity: 1;
+    }
+
+    52% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+    }
+
+    52% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: .6;
+    }
+
+}
+
+@keyframes button {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    67% {
+        opacity: 1;
+    }
+
+    69% {
+        transform: scale(1);
+    }
+
+    73% {
+        transform: scale(.85);
+    }
+
+    79% {
+        transform: scale(1.45);
+    }
+
+    84% {
+        transform: scale(.85);
+    }
+
+    89% {
+        transform: scale(1.1);
+    }
+
+    99% {
+        transform: scale(1);
+
+    }
+}
+
+@keyframes fadetxt {
+    0% {
+        opacity: 1;
+    }
+
+
+    52% {
+
+        opacity: 0.95;
+        transform: translateY(0%);
+    }
+
+    54% {
+        transform: translateY(6%);
+    }
+
+    65% {
+        opacity: .8;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(calc(-100vh / 2));
+    }
+}
+
+
+
+// photos of port macquarie

@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    
     <!-- logo image -->
     <div class="logo"><a href="index.html"></a></div>
     <!-- header and nav -->
@@ -34,73 +35,23 @@
         </nav>
     </header>
     <!-- main content -->
-    <main id="main">
-        <!-- dynamic background image -->
-        <div id="cover"></div>
-        <!-- heading -->
-        <div class="head">
-            <div class="heading">
-                contact
-            </div>
-        </div>
+    <!-- dynamic background image -->
+    <div id="cover"></div>
 
-        <!-- links to relivant accounts -->
+    <div class="landing">
+
+        <video autoplay loop>
+            <source src="video/landing.MP4" type="video/mp4">
+            <source src="video/landing.webm" type="video/webm">
+            <source src="video/landing.ogv" type="video/ogv">
+            Your browser does not support all major formats of video. Try using a different browser.
+        </video>
         <div class="links">
-            <a href="https://www.codewars.com/users/hero0nezero" target="_blank"><img src="img/icons/cw.png" alt="codewars icon"></a>
-            <a href="https://github.com/hero0nezero" target="_blank"><img src="img/icons/gh.png" alt="github icon"></a>
-            <a href="https://stackoverflow.com/users/10593964/hero0nezero" target="_blank"><img src="img/icons/so.png"
-                    alt="stack overflow icon"></a>
+            <a href="https://github.com/hero0nezero" target="_blank"><img class="git" src="img/icons/gh.png" alt="github icon"></a>
         </div>
 
-        <form action="https://formspree.io/caseyharvey1@gmail.com" method="POST" class="contact">
 
-            <input type="email" class="emailtxt" placeholder="your-email@example.com">
-
-            <textarea class="subtxt" rows="1" placeholder="subject"></textarea>
-
-            <textarea class="msgtxt" rows="6" placeholder="message"></textarea>
-
-            <button type="submit" value="Send" class="btn">submit</button>
-        </form>
-
-
-        <!-- text content -->
-        <!-- <div class="content">
-            debitis dolor mollitia id recusandae amet hic, beatae corporis voluptatibus est perspiciatis soluta vero
-            nemo iste dolorum, esse repellat labore veniam reprehenderit? Esse numquam harum pariatur praesentium
-            Lorem ipsum dolor sit, amet consectetur <br>
-            <p></p> adipisicing elit. Consequatur neque nesciunt, repudiandae omnis
-            debitis dolor mollitia id recusandae amet hic, beatae corporis voluptatibus est perspiciatis soluta vero
-            nemo iste dolorum, esse repellat labore veniam reprehenderit? Esse numquam harum pariatur praesentium
-            itaque enim vel fugiat cupiditate, delectus a
-        </div> -->
-        <!-- prism text editor section -->
-        <!-- <pre class="code"><code class="language-js">
-function orderWeight(str) {
-let arr = [];
-if (str.length > 0) {
-    arr = str.trim().split(/\s/);
-for (let i = 0; i < arr.length; i++) { 
-    arr[i]=[sum(arr[i].split('')), arr[i]]; 
-    } 
-}
-</code></pre> -->
-
-        <!-- image -->
-        <!-- <img src="img/head-logo.png" class="img" alt=""> -->
-
-
-        <!-- links to projects-->
-        <!-- <div class="tag"><a href="http://www.trezonaconsultinggroup.com/" target="_blank">trezona consulting group</a></div> -->
-        <!-- text content -->
-        <!-- <div class="content">
-            This website was my created using bootstrap, animate css and google fonts.
-        </div> -->
-
-        <!-- spacer for dynamic background positioning -->
-        <div class="space"></div>
-    </main>
-
+    </div>
 
 
     <!-- js links -->
