@@ -1,7 +1,21 @@
+ html {
+    overflow: scroll;
+    overflow-x: scroll;
+}
 
+::-webkit-scrollbar {
+    width: 2px;
+    height: 0;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+}
 
 code[class*="language-"],
 pre[class*="language-"] {
+    
     background: #000000;
     color: #6ae9ff;
     font-family: 'Share Tech Mono', monospace;
@@ -12,6 +26,7 @@ pre[class*="language-"] {
     word-break: normal;
     line-height: 1.5;
     height: auto;
+    max-height: 200px;
     width: 100%;
 
     -moz-tab-size: 4;
@@ -42,20 +57,21 @@ code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-    overflow: auto;
-    padding: 1em;
+    overflow: scroll;
+    padding: 0 1em 1em 1em;
     margin: 4px;
 }
 
 :not(pre)>code[class*="language-"],
 pre[class*="language-"] {
+    padding: 0 1em 1em 1em;
     background: #000000;
     /* border: 4px solid white; */
 }
 
 /* Inline code */
 :not(pre)>code[class*="language-"] {
-    padding: .1em;
+    padding: 0 1em 1em 1em;
     border-radius: .3em;
     /* background: #000000; */
 }

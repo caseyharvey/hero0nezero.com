@@ -10,9 +10,11 @@ $medlight: rgb(212, 212, 212);
 $light: white;
 
 
+
 body {
+    
     font-family: $mainfont;
-    height: 100%;
+    height: auto;
     padding: 0;
     margin: 0;
 
@@ -106,6 +108,7 @@ header {
 }
 
 main {
+
     justify-content: center;
     box-sizing: border-box;
     max-width: 748px;
@@ -114,13 +117,15 @@ main {
     display: flex;
     margin: auto;
 
+
+
     #cover {
         animation: cover 850ms forwards ease-in-out;
         clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
         background-color: $darkmed;
         position: absolute;
         max-width: 768px;
-        height: 100%;
+        height: 010%;
         width: 100%;
         z-index: -1;
 
@@ -212,12 +217,14 @@ form {
 
 .preview {
     width: 100%;
+    
     a {
         video {
             transition: outline 150ms ease-in-out;
             box-sizing: border-box;
             margin: 8px 0;
             width: 100%;
+                
 
             &:hover {
                 box-sizing: border-box;
@@ -266,6 +273,7 @@ form {
 
 
     a {
+        box-sizing: border-box;
         transition: color 150ms ease-in-out,
             background-color 150ms ease-in-out,
             outline 150ms ease-in-out;
