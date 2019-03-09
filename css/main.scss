@@ -12,7 +12,7 @@ $light: white;
 
 
 body {
-    
+
     font-family: $mainfont;
     height: auto;
     padding: 0;
@@ -94,10 +94,25 @@ header {
                     height: 100%;
                     width: 100%;
 
+
+                    &:focus,
                     &:hover {
-                        animation: navhov 280ms ease-in-out forwards;
+                        text-shadow: -1.5px 1px .5px $dark;
                         text-transform: uppercase;
-                        color: $dark;
+                        background-color: $medium;
+                        border: 4px solid $light;
+                        box-sizing: border-box;
+                        word-spacing: .06rem;
+                        line-height: 1.3rem;
+                        margin-right: auto;
+                        font-size: 1.1rem;
+                        min-width: 50%;
+                        display: flex;
+                        padding: 1rem;
+                        color: $light;
+                        // animation: navhov 280ms ease-in-out forwards;
+                        // text-transform: uppercase;
+                        // color: $dark;
 
                     }
 
@@ -173,9 +188,6 @@ main {
         width: 100%;
 
         .heading2 {
-            background-color: $light;
-            border: 2px solid $medlight;
-            box-sizing: border-box;
             margin: 15px 0 6px 2px;
             word-spacing: .06rem;
             line-height: 1.3rem;
@@ -184,7 +196,10 @@ main {
             min-width: 25%;
             display: flex;
             padding: .6rem;
-            color: $dark;
+            box-sizing: border-box;
+            background-color: $darkmed;
+            border: 4px solid $medlight;
+            color: $light;
         }
     }
 
@@ -210,21 +225,21 @@ form {
     margin: .5rem 0 0 0;
     width: 100%;
     height: .2rem;
-    background-image:linear-gradient( to bottom, $light 20%, $medium 40%);
+    background-image: linear-gradient(to bottom, $light 20%, $medium 40%);
 
 
 }
 
 .preview {
     width: 100%;
-    
+
     a {
         video {
             transition: outline 150ms ease-in-out;
             box-sizing: border-box;
             margin: 8px 0;
             width: 100%;
-                
+
 
             &:hover {
                 box-sizing: border-box;
@@ -372,12 +387,13 @@ form {
 
         &:focus {
             outline: none;
-            background-color: $light;
+            box-sizing: border-box;
+            background-color: $darkmed;
+            outline: 4px solid $medlight;
+            color: $light;
         }
 
-        &:active {
-            background-color: $light;
-        }
+        
 
     }
 
@@ -394,12 +410,13 @@ form {
 
         &:focus {
             outline: none;
-            background-color: $light;
+            box-sizing: border-box;
+            background-color: $darkmed;
+            outline: 4px solid $medlight;
+            color: $light;
         }
 
-        &:active {
-            background-color: $light;
-        }
+        
     }
 
     .msgtxt {
@@ -415,15 +432,18 @@ form {
 
         &:focus {
             outline: none;
-            background-color: $light;
+            box-sizing: border-box;
+            background-color: $darkmed;
+            outline: 4px solid $medlight;
+            color: $light;
         }
 
-        &:active {
-            background-color: $light;
-        }
+        
     }
 
     .btn {
+        transition: background-color 150ms ease-in;
+
         font-size: 1rem;
         background-color: $light;
         font-family: $mainfont;
@@ -435,9 +455,9 @@ form {
         width: 50%;
 
         &:hover {
-            transition: color 250ms ease-in-out,
-                background-color 250ms ease-in-out;
-            background-color: $dark;
+            box-sizing: border-box;
+            background-color: $darkmed;
+            outline: 4px solid $medlight;
             color: $light;
         }
     }
