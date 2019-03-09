@@ -65,6 +65,7 @@ header {
         width: 100%;
 
         ul {
+            box-sizing: border-box;
             list-style-type: none;
             display: flex;
             height: 50px;
@@ -73,16 +74,33 @@ header {
             margin: 0;
 
             li {
+                box-sizing: border-box;
                 display: flex;
                 height: 100%;
                 width: 100%;
 
                 &:hover {
+                    box-sizing: border-box;
                     animation: navhov 280ms ease-in-out forwards;
-                    background-color: $light;
+                    background-color: $medium;
+                    border: 4px solid $light;
+
+                    a {
+                        text-shadow: -1.5px 1px .5px $dark;
+                        text-transform: uppercase;
+                        word-spacing: .06rem;
+                        line-height: 1.3rem;
+                        margin-right: auto;
+                        font-size: 1.1rem;
+                        min-width: 50%;
+                        padding: 1rem;
+                        color: $light;
+
+                    }
                 }
 
                 a {
+                    box-sizing: border-box;
                     justify-content: center;
                     text-decoration: none;
                     align-items: center;
@@ -94,27 +112,6 @@ header {
                     height: 100%;
                     width: 100%;
 
-
-                    &:focus,
-                    &:hover {
-                        text-shadow: -1.5px 1px .5px $dark;
-                        text-transform: uppercase;
-                        background-color: $medium;
-                        border: 4px solid $light;
-                        box-sizing: border-box;
-                        word-spacing: .06rem;
-                        line-height: 1.3rem;
-                        margin-right: auto;
-                        font-size: 1.1rem;
-                        min-width: 50%;
-                        display: flex;
-                        padding: 1rem;
-                        color: $light;
-                        // animation: navhov 280ms ease-in-out forwards;
-                        // text-transform: uppercase;
-                        // color: $dark;
-
-                    }
 
                 }
             }
@@ -176,7 +173,7 @@ main {
             margin-right: auto;
             font-size: 1.1rem;
             min-width: 50%;
-            display: flex;
+
             padding: 1rem;
             color: $light;
         }
@@ -193,13 +190,32 @@ main {
             line-height: 1.3rem;
             margin-right: auto;
             font-size: 1.1rem;
-            min-width: 25%;
-            display: flex;
+            min-width: 30%;
             padding: .6rem;
             box-sizing: border-box;
             background-color: $darkmed;
             border: 4px solid $medlight;
             color: $light;
+        }
+    }
+
+    .head3 {
+
+        display: flex;
+        width: 100%;
+
+        .heading3 {
+            margin: 15px 0 6px 4px;
+            word-spacing: .06rem;
+            line-height: 1.3rem;
+            margin-right: auto;
+            font-size: 1.1rem;
+            min-width: 20%;
+            padding: .4rem;
+            box-sizing: border-box;
+            background-color: $medium;
+            border: 2px solid $medium;
+            color: $dark;
         }
     }
 
@@ -221,16 +237,14 @@ form {
 }
 
 #end {
-    opacity: .3;
-    margin: .5rem 0 0 0;
+    margin: 10px 4px;
     width: 100%;
-    height: .2rem;
-    background-image: linear-gradient(to bottom, $light 20%, $medium 40%);
-
-
+    height: .1rem;
+    background-image: (linear-gradient(left, rgba(44, 44, 44, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 1) 65%, rgba(44, 44, 44, 1) 100%));
 }
 
 .preview {
+
     width: 100%;
 
     a {
@@ -239,9 +253,12 @@ form {
             box-sizing: border-box;
             margin: 8px 0;
             width: 100%;
+            filter: grayscale(100%);
+
 
 
             &:hover {
+                filter: grayscale(0);
                 box-sizing: border-box;
                 outline: 4px solid $medlight;
             }
@@ -278,43 +295,32 @@ form {
 
 
 .tag {
-    width: 100%;
-    background-color: $darkmed;
+    box-sizing: border-box;
+    transition: color 150ms ease-in-out,
+        background-color 150ms ease-in-out,
+        outline 150ms ease-in-out;
     justify-content: flex-start;
-    margin: 15px 0 0 0;
+    background-color: $dark;
+    text-decoration: none;
     align-items: center;
-    margin-right: auto;
+    margin-bottom: 8px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.3rem 1rem;
     display: flex;
+    color: $light;
+    height: 100%;
+    width: 100%;
 
+    &:hover {
 
-    a {
         box-sizing: border-box;
-        transition: color 150ms ease-in-out,
-            background-color 150ms ease-in-out,
-            outline 150ms ease-in-out;
-        justify-content: flex-start;
-        background-color: $dark;
-        text-decoration: none;
-        align-items: center;
-        margin-bottom: 8px;
-        text-align: center;
-        // margin-left: 2px;
-        cursor: pointer;
-        padding: 0.3rem 1rem;
-        display: flex;
+        text-shadow: -1.5px 1px .5px $dark;
+        background-color: $medium;
+        outline: 4px solid $medlight;
         color: $light;
-        height: 100%;
-        width: 100%;
-
-        &:hover {
-
-            box-sizing: border-box;
-            text-shadow: -1.5px 1px .5px $dark;
-            background-color: $medium;
-            outline: 4px solid $medlight;
-            color: $light;
-        }
     }
+
 }
 
 .space {
@@ -335,7 +341,7 @@ form {
         display: flex;
         height: 100%;
         padding: 1rem 2rem;
-        clip-path: polygon(85% 7%, 85% 85%, 50% 100%, 15% 85%, 15% 7%);
+        clip-path: polygon(85% 7%, 85% 75%, 50% 100%, 15% 75%, 15% 7%);
         transition: background-color 220ms ease-out;
 
 
@@ -393,7 +399,7 @@ form {
             color: $light;
         }
 
-        
+
 
     }
 
@@ -416,7 +422,7 @@ form {
             color: $light;
         }
 
-        
+
     }
 
     .msgtxt {
@@ -438,7 +444,7 @@ form {
             color: $light;
         }
 
-        
+
     }
 
     .btn {
