@@ -5,8 +5,8 @@ sans-serif;
 
 $dark: rgb(0, 0, 0);
 $darkmed: rgb(44, 44, 44);
-$medium: grey;
-$medlight: rgb(235, 235, 235);
+$medium: rgb(139, 139, 139);
+$medlight: rgb(212, 212, 212);
 $light: white;
 
 
@@ -127,6 +127,7 @@ main {
     }
 
     .content {
+
         background-color: $darkmed;
         box-sizing: border-box;
         font-family: $subfont;
@@ -135,19 +136,18 @@ main {
         flex-wrap: wrap;
         display: flex;
         color: $light;
-        padding: 1rem .4rem;
+        padding: .8rem .4rem .6rem .4rem;
         width: 100%;
 
     }
 
     .head {
-
         display: flex;
         width: 100%;
 
         .heading {
-            text-shadow: -2px 2px $dark;
-            background-color: $darkmed;
+            text-shadow: -1.5px 1px .5px $dark;
+            background-color: $medium;
             border: 4px solid $light;
             box-sizing: border-box;
             margin: 8px 0 10px 2px;
@@ -155,35 +155,74 @@ main {
             line-height: 1.3rem;
             margin-right: auto;
             font-size: 1.1rem;
-            min-width: 25%;
+            min-width: 50%;
             display: flex;
-            padding: .7rem;
+            padding: 1rem;
             color: $light;
         }
     }
 
+    .head2 {
+
+        display: flex;
+        width: 100%;
+
+        .heading2 {
+            background-color: $light;
+            border: 2px solid $medlight;
+            box-sizing: border-box;
+            margin: 15px 0 6px 2px;
+            word-spacing: .06rem;
+            line-height: 1.3rem;
+            margin-right: auto;
+            font-size: 1.1rem;
+            min-width: 25%;
+            display: flex;
+            padding: .6rem;
+            color: $dark;
+        }
+    }
 
     .img {
-        border: 4px solid $darkmed;
         box-sizing: border-box;
-        margin: 8px 0;
+        margin: 8px 0 25px 0;
         display: flex;
         height: 100%;
         width: 100%;
 
     }
+}
+
+form {
+    padding: 1rem;
+    background-color: $medium;
+    border: 4px solid $medlight;
+    margin: 2rem;
+}
+
+#end {
+    opacity: .3;
+    margin: .5rem 0 0 0;
+    width: 100%;
+    height: .2rem;
+    background-image:linear-gradient( to bottom, $light 20%, $medium 40%);
+
 
 }
 
 .preview {
     width: 100%;
-
     a {
         video {
-            border: 4px solid $darkmed;
+            transition: outline 150ms ease-in-out;
             box-sizing: border-box;
-            margin-bottom: 8px;
+            margin: 8px 0;
             width: 100%;
+
+            &:hover {
+                box-sizing: border-box;
+                outline: 4px solid $medlight;
+            }
         }
     }
 }
@@ -198,7 +237,7 @@ main {
     flex-wrap: wrap;
     margin: 0 auto;
     display: flex;
-    height: 75vh;
+    height: 80vh;
 
     video {
 
@@ -227,8 +266,9 @@ main {
 
 
     a {
-        transition: color 250ms ease-in-out,
-            background-color 250ms ease-in-out;
+        transition: color 150ms ease-in-out,
+            background-color 150ms ease-in-out,
+            outline 150ms ease-in-out;
         justify-content: flex-start;
         background-color: $dark;
         text-decoration: none;
@@ -244,8 +284,12 @@ main {
         width: 100%;
 
         &:hover {
-            background-color: $light;
-            color: $darkmed;
+
+            box-sizing: border-box;
+            text-shadow: -1.5px 1px .5px $dark;
+            background-color: $medium;
+            outline: 4px solid $medlight;
+            color: $light;
         }
     }
 }
@@ -284,6 +328,7 @@ main {
             align-items: center;
             height: 100%;
             box-sizing: border-box;
+
 
             // &:hover {
 

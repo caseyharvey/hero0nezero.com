@@ -2,6 +2,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
+    background: #000000;
     color: #6ae9ff;
     font-family: 'Share Tech Mono', monospace;
     direction: ltr;
@@ -56,6 +57,7 @@ pre[class*="language-"] {
 :not(pre)>code[class*="language-"] {
     padding: .1em;
     border-radius: .3em;
+    /* background: #000000; */
 }
 
 .token.comment,
@@ -162,5 +164,14 @@ code.language-css .token.selector>.token.pseudo-element {
 }
 
 
-
+/* Fallback, in case JS does not run, to ensure the code is at least visible */
+[class*='lang-'] script[type='text/plain'],
+[class*='language-'] script[type='text/plain'],
+script[type='text/plain'][class*='lang-'],
+script[type='text/plain'][class*='language-'] {
+    display: block;
+    font: 100% Consolas, Monaco, monospace;
+    white-space: pre;
+    overflow: auto;
+}
 
