@@ -366,6 +366,8 @@ form {
   padding: 1rem 2rem;
   -webkit-clip-path: polygon(85% 7%, 85% 85%, 50% 100%, 15% 85%, 15% 7%);
           clip-path: polygon(85% 7%, 85% 85%, 50% 100%, 15% 85%, 15% 7%);
+  -webkit-transition: background-color 220ms ease-out;
+  transition: background-color 220ms ease-out;
 }
 
 .links a:hover {
@@ -378,6 +380,10 @@ form {
 }
 
 .links a img {
+  -webkit-transition: -webkit-filter 220ms ease-out;
+  transition: -webkit-filter 220ms ease-out;
+  transition: filter 220ms ease-out;
+  transition: filter 220ms ease-out, -webkit-filter 220ms ease-out;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

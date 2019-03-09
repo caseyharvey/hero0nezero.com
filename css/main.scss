@@ -321,6 +321,7 @@ form {
         height: 100%;
         padding: 1rem 2rem;
         clip-path: polygon(85% 7%, 85% 85%, 50% 100%, 15% 85%, 15% 7%);
+        transition: background-color 220ms ease-out;
 
 
         &:hover {
@@ -332,6 +333,7 @@ form {
         }
 
         img {
+            transition: filter 220ms ease-out;
             justify-content: center;
             align-items: center;
             height: 100%;
