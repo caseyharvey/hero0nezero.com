@@ -1,3 +1,5 @@
+
+
 body {
   font-family: "Share Tech Mono", sans-serif;
   height: auto;
@@ -92,12 +94,12 @@ header nav ul li:hover {
           box-sizing: border-box;
   -webkit-animation: navhov 200ms ease-in-out forwards;
           animation: navhov 200ms ease-in-out forwards;
-  background-color: #8b8b8b;
+  background-color: #7a7a7a;
   border: 4px solid white;
 }
 
 header nav ul li:hover a {
-  text-shadow: -1px 0.8px black;
+  text-shadow: -1px 0.7px 0.5px black;
   text-transform: uppercase;
   word-spacing: .06rem;
   line-height: 1.3rem;
@@ -159,7 +161,8 @@ main #cover {
 }
 
 main .content {
-  background-color: #303030;
+  margin-top: .4rem;
+  margin-bottom: 1.3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -171,7 +174,7 @@ main .content {
   display: -ms-flexbox;
   display: flex;
   color: white;
-  padding: .8rem .4rem .6rem .4rem;
+  padding: .4rem;
   width: 100%;
 }
 
@@ -183,12 +186,12 @@ main .head {
 }
 
 main .head .heading {
-  text-shadow: -1.5px 1px 0.5px black;
-  background-color: #8b8b8b;
+  text-shadow: -1px 0.7px 0.5px black;
+  background-color: #7a7a7a;
   border: 4px solid white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 8px 0 10px 2px;
+  margin: 1rem .1rem 1.5rem 0;
   word-spacing: .06rem;
   line-height: 1.3rem;
   margin-right: auto;
@@ -239,8 +242,8 @@ main .head3 .heading3 {
   padding: .4rem .4rem .4rem 1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #8b8b8b;
-  border: 2px solid #8b8b8b;
+  background-color: #7a7a7a;
+  border: 2px solid #7a7a7a;
   color: white;
 }
 
@@ -257,7 +260,7 @@ main .img {
 
 form {
   padding: 1rem;
-  background-color: #8b8b8b;
+  background-color: #7a7a7a;
   border: 4px solid #d4d4d4;
   margin: 2rem;
 }
@@ -271,23 +274,28 @@ form {
 }
 
 .preview {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.preview a {
+  height: 100%;
   width: 100%;
 }
 
 .preview a video {
+  background-color: #d4d4d4;
   -webkit-transition: outline 150ms ease-in-out;
   transition: outline 150ms ease-in-out;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 8px 0;
   width: 100%;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  outline: 4px solid #303030;
 }
 
 .preview a video:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: 4px solid #d4d4d4;
@@ -330,20 +338,12 @@ form {
 .tagger {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: color 150ms ease-in-out, background-color 150ms ease-in-out, outline 150ms ease-in-out;
-  transition: color 150ms ease-in-out, background-color 150ms ease-in-out, outline 150ms ease-in-out;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-transition: background-color 150ms ease-in-out, outline 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out, outline 150ms ease-in-out;
   background-color: black;
-  text-decoration: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 8px;
-  text-align: center;
+  margin-right: auto;
+  margin-left: 4px;
   cursor: pointer;
-  padding: 0.3rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,15 +355,22 @@ form {
 .tagger:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  text-shadow: -1.5px 1px 0.5px black;
-  background-color: #8b8b8b;
+  text-shadow: -1px 0.7px 0.3px black;
+  background-color: #7a7a7a;
   outline: 4px solid #d4d4d4;
   color: white;
 }
 
-.space {
-  height: 100px;
-  width: 100px;
+.tagger a {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-decoration: none;
 }
 
 .links {
@@ -378,7 +385,7 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 30px;
+  height: 50px;
   width: 70%;
 }
 
@@ -387,11 +394,17 @@ form {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  padding: 1rem 2rem;
-  -webkit-clip-path: polygon(85% 7%, 85% 75%, 50% 100%, 15% 75%, 15% 7%);
-          clip-path: polygon(85% 7%, 85% 75%, 50% 100%, 15% 75%, 15% 7%);
+  padding: 1rem 2rem 1.5rem 2rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: background-color 220ms ease-out;
   transition: background-color 220ms ease-out;
+  -webkit-clip-path: polygon(85% 7%, 85% 75%, 50% 100%, 15% 75%, 15% 7%);
+          clip-path: polygon(85% 7%, 85% 75%, 50% 100%, 15% 75%, 15% 7%);
 }
 
 .links a:hover {
@@ -404,19 +417,13 @@ form {
 }
 
 .links a img {
+  height: 70%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: -webkit-filter 220ms ease-out;
   transition: -webkit-filter 220ms ease-out;
   transition: filter 220ms ease-out;
   transition: filter 220ms ease-out, -webkit-filter 220ms ease-out;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .contact {
@@ -521,6 +528,43 @@ form {
   color: white;
 }
 
+#backs {
+  border: 3px solid black;
+  border-radius: 2px;
+  background-color: #303030;
+  -webkit-animation: back 1300ms forwards ease-in;
+          animation: back 1300ms forwards ease-in;
+  -webkit-transition: background-color 120ms ease-in;
+  transition: background-color 120ms ease-in;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: .2rem .4rem;
+  margin: 2rem 0 0 0;
+}
+
+#backs a {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #7a7a7a;
+  font-size: 1rem;
+  text-decoration: none;
+  -webkit-transition: color 120ms ease-in;
+  transition: color 120ms ease-in;
+}
+
+#backs:hover {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: black;
+  border: 3px solid #d4d4d4;
+}
+
+#backs:hover a {
+  color: white;
+}
+
 @media all {
   a {
     font-size: .8rem;
@@ -589,6 +633,30 @@ form {
     opacity: 0;
   }
   100% {
+  }
+}
+
+@-webkit-keyframes back {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes back {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

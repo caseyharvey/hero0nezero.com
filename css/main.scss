@@ -5,10 +5,11 @@ sans-serif;
 
 $dark: rgb(0, 0, 0);
 $darkmed: rgb(48, 48, 48);
-$medium: rgb(139, 139, 139);
+$drkmd: rgb(70, 70, 70);
+$darkmedtrans: rgba(48, 48, 48, 0.5);
+$medium: rgb(122, 122, 122);
 $medlight: rgb(212, 212, 212);
 $light: white;
-
 
 
 body {
@@ -92,7 +93,7 @@ header {
                     border: 4px solid $light;
 
                     a {
-                        text-shadow: -1px .8px  $dark;
+                        text-shadow: -1px .7px .5px $dark;
                         text-transform: uppercase;
                         word-spacing: .06rem;
                         line-height: 1.3rem;
@@ -126,7 +127,6 @@ header {
 }
 
 main {
-
     justify-content: center;
     box-sizing: border-box;
     max-width: 748px;
@@ -134,8 +134,6 @@ main {
     flex-wrap: wrap;
     display: flex;
     margin: auto;
-
-
 
     #cover {
         animation: cover 850ms forwards ease-in-out;
@@ -150,8 +148,8 @@ main {
     }
 
     .content {
-
-        background-color: $darkmed;
+        margin-top: .4rem;
+        margin-bottom: 1.3rem;
         box-sizing: border-box;
         font-family: $subfont;
         word-spacing: .06rem;
@@ -159,7 +157,7 @@ main {
         flex-wrap: wrap;
         display: flex;
         color: $light;
-        padding: .8rem .4rem .6rem .4rem;
+        padding: .4rem;
         width: 100%;
 
     }
@@ -169,11 +167,11 @@ main {
         width: 100%;
 
         .heading {
-            text-shadow: -1.5px 1px .5px $dark;
+            text-shadow: -1px .7px .5px $dark;
             background-color: $medium;
             border: 4px solid $light;
             box-sizing: border-box;
-            margin: 8px 0 10px 2px;
+            margin: 1rem .1rem 1.5rem 0;
             word-spacing: .06rem;
             line-height: 1.3rem;
             margin-right: auto;
@@ -251,27 +249,34 @@ form {
 }
 
 .preview {
-
+    margin: 0;
+    padding: 0;
     width: 100%;
+    height: 100%;
 
     a {
+
+        height: 100%;
+        width: 100%;
+
         video {
+            background-color: $medlight;
             transition: outline 150ms ease-in-out;
             box-sizing: border-box;
-            margin: 8px 0;
             width: 100%;
-            filter: grayscale(100%);
-
-
+            // filter: grayscale(100%);
+            outline: 4px solid $darkmed;
 
             &:hover {
-                filter: grayscale(0);
+                // filter: grayscale(0);
                 box-sizing: border-box;
                 outline: 4px solid $medlight;
             }
         }
     }
 }
+
+
 
 .landing {
     background-image: linear-gradient(to bottom, $darkmed, $dark);
@@ -303,17 +308,13 @@ form {
 
 .tagger {
     box-sizing: border-box;
-    transition: color 150ms ease-in-out,
+    transition:
         background-color 150ms ease-in-out,
         outline 150ms ease-in-out;
-    justify-content: flex-start;
     background-color: $dark;
-    text-decoration: none;
-    align-items: center;
-    margin-bottom: 8px;
-    text-align: center;
+    margin-right: auto;
+    margin-left: 4px;
     cursor: pointer;
-    padding: 0.3rem 1rem;
     display: flex;
     color: $light;
     height: 100%;
@@ -322,17 +323,22 @@ form {
     &:hover {
 
         box-sizing: border-box;
-        text-shadow: -1.5px 1px .5px $dark;
+        text-shadow: -1px .7px .3px $dark;
         background-color: $medium;
         outline: 4px solid $medlight;
         color: $light;
     }
 
-}
+    a {
+        padding: 1rem;
+        display: flex;
+        text-align: left;
+        height: 100%;
+        width: 100%;
+        color: $light;
+        text-decoration: none;
+    }
 
-.space {
-    height: 100px;
-    width: 100px;
 }
 
 .links {
@@ -341,16 +347,17 @@ form {
     min-width: 300px;
     margin: 1rem 0;
     display: flex;
-    height: 30px;
+    height: 50px;
     width: 70%;
 
     a {
         display: flex;
         height: 100%;
-        padding: 1rem 2rem;
-        clip-path: polygon(85% 7%, 85% 75%, 50% 100%, 15% 75%, 15% 7%);
+        padding: 1rem 2rem 1.5rem 2rem;
+        align-items: flex-end;
+        justify-content: center;
         transition: background-color 220ms ease-out;
-
+        clip-path: polygon(85% 7%, 85% 75%, 50% 100%, 15% 75%, 15% 7%);
 
         &:hover {
             background-color: rgb(255, 255, 255);
@@ -361,18 +368,9 @@ form {
         }
 
         img {
-            transition: filter 220ms ease-out;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
+            height: 70%;
             box-sizing: border-box;
-
-
-            // &:hover {
-
-            //     filter: invert(100%);
-
-            // }
+            transition: filter 220ms ease-out;
         }
     }
 
@@ -478,7 +476,41 @@ form {
 }
 
 
+#backs {
 
+    a {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        color: $medium;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: color 120ms ease-in;
+
+    }
+    border: 3px solid $dark;
+    border-radius: 2px;
+    background-color: $darkmed;
+    animation: back 1300ms forwards ease-in;
+    transition: background-color 120ms ease-in;
+    box-sizing: border-box;
+    padding: .2rem .4rem;
+    margin: 2rem 0 0 0;
+
+    &:hover {
+        box-sizing: border-box;
+        background-color: $dark;
+        border: 3px solid $medlight;
+
+
+        a {
+            color: $light;
+        }
+
+    }
+
+}
 
 // media queries
 
@@ -529,6 +561,20 @@ form {
     }
 
     100% {}
+}
+@keyframes back {
+    0% {
+
+        opacity: 0;
+    }
+    50% {
+
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 

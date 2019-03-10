@@ -18,12 +18,12 @@ var img = 1;
 left.addEventListener('click', function () {
 
     if (img === 1) {
-        cover2.style.backgroundImage = "url('img2/" + listnum + ".jpeg')";
+        cover2.style.backgroundImage = "url('../img2/" + listnum + ".jpeg')";
         img = listnum;
 
     } else {
         img--;
-        cover2.style.backgroundImage = "url('img2/" + img + ".jpeg')";
+        cover2.style.backgroundImage = "url('../img2/" + img + ".jpeg')";
 
     }
 
@@ -31,12 +31,12 @@ left.addEventListener('click', function () {
 right.addEventListener('click', function () {
 
     if (img === listnum) {
-        cover2.style.backgroundImage = "url('img2/1.jpeg')";
+        cover2.style.backgroundImage = "url('../img2/1.jpeg')";
         img = 1;
 
     } else {
         img++;
-        cover2.style.backgroundImage = "url('img2/" + img + ".jpeg')";
+        cover2.style.backgroundImage = "url('../img2/" + img + ".jpeg')";
 
     }
 

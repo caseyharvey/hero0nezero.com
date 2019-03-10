@@ -42,32 +42,16 @@
                 workshop
             </div>
         </div>
-        <div class="head2">
-            <div class="heading2">
-                the gallery
-            </div>
-        </div>
-
-        <!-- text content -->
-        <div class="content">
-            i want to make a full screen gallery app. i want the transitions between images to be animated.
-            it will be satisfying to swipe between pages. information will gracefully slide on and off the
-            page when needed. it will move in such a way that you don't focus on any one feature at a time but
-            enjoy the total experience
-        </div>
-        <div class="head3">
-            <div class="heading3">
-                create files
-            </div>
-        </div>
-        <div class="content">
-            create html, css and js files for the project.
-
-            below is the html boiler plate i am using for this project.
-        </div>
-<!-- prism text editor section -->
+<div class="tagger">
+    <a href="workshop/WSgallery.html">
+        the gallery
+    </a>
+</div>
+<div class="content">
+i want to make a full screen gallery app. with satisfying animations and sounds.
+</div>
 <pre class="language-markup"><code>
-&lt;!DOCTYPE html>
+    &lt;!DOCTYPE html>
 &lt;html lang="en">
 
 &lt;head>
@@ -75,68 +59,68 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
     &lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    &lt;!-- google fonts -->
-    &lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     &lt;!-- css link -->
     &lt;link rel="stylesheet" href="css/main.css">
+    &lt;!-- text editor syle link -->
+    &lt;link rel="stylesheet" href="css/prism.css">
+    &lt;!-- google fonts -->
+    &lt;link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    &lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    &lt;title>the-gallery&lt;/title>
+
+    &lt;title>hero0nezero&lt;/title>
+
 &lt;/head>
 
 &lt;body>
-
-    &lt;!-- js links -->
-    &lt;script src="app.js">&lt;/script>
-&lt;/body>
-&lt;/html>
-</code></pre>
-<!-- prism text editor section -->
-
-        <div class="content">
-            then i created a new repo on github for the project. after creating repo i clone it to the local folder ill
-            be working from and commit and push the files and folders.
-        </div>
-        <div class="content">
-            set up the js file to make sure we're ready to go. setTimeout for a little suspens.
-
-        </div>
-        <pre class="code"><code class="language-js">
-setTimeout(function () {
-alert("its working baby");
-}, 2000);
-</code></pre>
-        <div class="head3">
-            <div class="heading3">
-                build html layout
-            </div>
-        </div>
-        <div class="content">
-            i created an individual div for each image for more control.
-            the note div will contain any text related to the image.
-            repeat the process for the total number of images in the gallery.
-
-        </div>
-
-<!-- prism text editor section -->
-<pre class="language-markup"><code>
-    &lt;!-- one div to hold all the images for the gallery. max size with no padding or margin -->
-    &lt;div id="main">
-        &lt;!-- i created an individual div for each image for more control -->
-        &lt;div id="img1">
-            &lt;!-- the note div will contain any text related to the image -->
-            &lt;div id="note">
-
+    &lt;!-- logo image -->
+    &lt;div class="logo">&lt;a href="index.html">&lt;/a>&lt;/div>
+    &lt;!-- header and nav -->
+    &lt;header>
+        &lt;nav>
+            &lt;ul class="nav">
+                &lt;li>&lt;a class="tabs" href="projects.html">projects&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="tabs" href="workshop.html">workshop&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="tabs" href="contact.html">contact&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/nav>
+    &lt;/header>
+    &lt;!-- main content -->
+    &lt;main id="main">
+        &lt;!-- dynamic background image -->
+        &lt;div id="cover">&lt;/div>
+        &lt;!-- heading -->
+        &lt;div class="head">
+            &lt;div class="heading">
+                workshop
             &lt;/div>
         &lt;/div>
 
-        &lt;!-- repeat the process for the total number of images in the gallery -->
-        &lt;div id="img2">
-            &lt;div id="note">&lt;/div>
-        &lt;/div>
-    &lt;/div>
+&lt;pre class="language-*">&lt;code>
+    
+&lt;/code>&lt;/pre>
+&lt;!-- prism text editor section -->
+&lt;div id="backs">
+    &lt;a href="#top">^ top&lt;/a>
+&lt;/div>
+    &lt;/main>
+
+
+
+    &lt;!-- js links -->
+
+    &lt;script src="prism.js">&lt;/script>
+    &lt;script src="app.js">&lt;/script>
+    &lt;!-- text editor links -->
+    &lt;!-- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js">&lt;/script> -->
+&lt;/body>
+
+&lt;/html>
 </code></pre>
 <!-- prism text editor section -->
-
+<div id="backs">
+    <a href="#top">^ top</a>
+</div>
     </main>
 
 
