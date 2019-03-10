@@ -4,7 +4,7 @@ $subfont: 'Montserrat',
 sans-serif;
 
 $dark: rgb(0, 0, 0);
-$darkmed: rgb(44, 44, 44);
+$darkmed: rgb(48, 48, 48);
 $medium: rgb(139, 139, 139);
 $medlight: rgb(212, 212, 212);
 $light: white;
@@ -87,12 +87,12 @@ header {
 
                 &:hover {
                     box-sizing: border-box;
-                    animation: navhov 280ms ease-in-out forwards;
+                    animation: navhov 200ms ease-in-out forwards;
                     background-color: $medium;
                     border: 4px solid $light;
 
                     a {
-                        text-shadow: -1.5px 1px .5px $dark;
+                        text-shadow: -1px .8px  $dark;
                         text-transform: uppercase;
                         word-spacing: .06rem;
                         line-height: 1.3rem;
