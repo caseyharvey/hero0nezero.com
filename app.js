@@ -1,7 +1,7 @@
 
 function sizer () {
    var cover = document.getElementById('cover').style;
-   var main = document.getElementById('main').clientHeight + 300;
+   var main = document.getElementById('main').clientHeight + 100;
    cover.height = main + 'px';
     
 }

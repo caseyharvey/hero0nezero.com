@@ -9,7 +9,7 @@
     <!-- css link -->
     <link rel="stylesheet" href="css/main.css">
     <!-- text editor syle link -->
-    <link rel="stylesheet" href="css/prism-dracula.css">
+    <link rel="stylesheet" href="css/prism.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -62,39 +62,43 @@
         </div>
         <div class="content">
             create html, css and js files for the project.
+
+            below is the html boiler plate i am using for this project.
         </div>
-        <!-- prism text editor section -->
-        <pre><code class="language-">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+<!-- prism text editor section -->
+<pre class="language-markup"><code>
+&lt;!DOCTYPE html>
+&lt;html lang="en">
 
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-&lt;!-- google fonts --&gt;
-&lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"&gt;
-&lt;!-- css link --&gt;
-&lt;link rel="stylesheet" href="css/main.css"&gt;
+    &lt;!-- google fonts -->
+    &lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    &lt;!-- css link -->
+    &lt;link rel="stylesheet" href="css/main.css">
 
-&lt;title&gt;the gallery&lt;/title&gt;
-&lt;/head&gt;
+    &lt;title>the gallery&lt;/title>
+&lt;/head>
 
-&lt;body&gt;
+&lt;body>
 
-&lt;!-- js links --&gt;
-&lt;script src="app.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
+    &lt;!-- js links -->
+    &lt;script src="app.js">&lt;/script>
+&lt;/body>
+&lt;/html>
 </code></pre>
+<!-- prism text editor section -->
+
 
 
 
         <!-- <pre class="code"><code class="language-js">
 
 </code></pre> -->
+
 
 
 
@@ -107,6 +111,7 @@
         <div class="content"></div>
         <div class="content">
             set up the js file to make sure we're ready to go. setTimeout for a little suspens.
+
         </div>
         <pre class="code"><code class="language-js">
 setTimeout(function () {
@@ -118,6 +123,32 @@ alert("its working baby");
                 build html layout
             </div>
         </div>
+        <div class="content">
+            i created an individual div for each image for more control.
+            the note div will contain any text related to the image.
+            repeat the process for the total number of images in the gallery.
+
+        </div>
+
+<!-- prism text editor section -->
+<pre class="language-markup"><code>
+    &lt;!-- one div to hold all the images for the gallery. max size with no padding or margin -->
+    &lt;div id="main">
+        &lt;!-- i created an individual div for each image for more control -->
+        &lt;div id="img1">
+            &lt;!-- the note div will contain any text related to the image -->
+            &lt;div id="note">
+
+            &lt;/div>
+        &lt;/div>
+
+        &lt;!-- repeat the process for the total number of images in the gallery -->
+        &lt;div id="img2">
+            &lt;div id="note">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+</code></pre>
+<!-- prism text editor section -->
 
     </main>
 
@@ -125,9 +156,10 @@ alert("its working baby");
 
     <!-- js links -->
 
+    <script src="prism.js"></script>
     <script src="app.js"></script>
     <!-- text editor links -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script> -->
 </body>
 
 </html>
