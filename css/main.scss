@@ -14,14 +14,20 @@ $light: white;
 
 $anicurve: cubic-bezier(0.4, 0.5, 0.5, 1.1);
 $anicurve2: cubic-bezier(0.4, 0.5, 0.8, 1.2);
-// $anicurve2: cubic-bezier(0.99, 0.64, 0.42, 1);
 $anitime: 1000ms;
 $anitime2: 300ms;
 $hold: 500ms;
 $hold2: 700ms;
 
+$width: 648px;
+
+
+
+
+
 
 body {
+    background-color: $dark;
     font-family: $mainfont;
     height: auto;
     padding: 0;
@@ -37,7 +43,8 @@ body {
     background-color: $light;
     background-size: contain;
     justify-content: center;
-    max-width: 768px;
+    filter: invert(100%);
+    max-width: $width;
     cursor: pointer;
     display: flex;
     margin: auto;
@@ -66,8 +73,10 @@ span {
 }
 
 header {
+    border-radius: 4px 4px 0 0;
     background-color: $darkmed;
-    max-width: 768px;
+    box-sizing: border-box;
+    max-width: $width;
     margin: 0 auto;
     display: flex;
     height: 60px;
@@ -75,8 +84,9 @@ header {
 
 
     nav {
-        display: flex;
         width: 100%;
+        display: flex;
+        box-sizing: border-box;
 
         ul {
             box-sizing: border-box;
@@ -88,6 +98,7 @@ header {
             margin: 0;
 
             li {
+                border: 2px solid $darkmed;
                 box-sizing: border-box;
                 display: flex;
                 height: 100%;
@@ -97,10 +108,11 @@ header {
                     box-sizing: border-box;
                     animation: navhov 200ms ease-in-out forwards;
                     background-color: $medium;
-                    border: 4px solid $light;
+                    border: 2px solid $medlight;
 
                     a {
-                        text-shadow: -1px .7px .5px $dark;
+                        box-sizing: border-box;
+                        text-shadow: -1px 1px .5px $dark;
                         text-transform: uppercase;
                         word-spacing: .06rem;
                         line-height: 1.3rem;
@@ -136,8 +148,8 @@ header {
 main {
     justify-content: center;
     box-sizing: border-box;
-    max-width: 768px;
-    padding: 0 10px;
+    max-width: $width;
+    padding: 0 15px;
     flex-wrap: wrap;
     display: flex;
     margin: auto;
@@ -150,27 +162,28 @@ main {
 
 
     .aniback {
+
         animation: cover $anitime forwards $anicurve;
         clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
         background-color: $darkmed;
-        max-width: 768px;
+        max-width: $width;
         height: 0;
         width: 100%;
     }
 
     .content {
         opacity: 0;
-        animation: back $anitime2 forwards $hold2 $anicurve2;
-        margin-top: .4rem;
-        margin-bottom: 1rem;
+        margin-right: auto;
+        margin-bottom: 1.2rem;
         box-sizing: border-box;
+        animation: back $anitime2 forwards $hold2 $anicurve2;
         font-family: $subfont;
         word-spacing: .06rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        padding: 0.2rem;
         flex-wrap: wrap;
         display: flex;
         color: $light;
-        padding: .5rem;
         width: 100%;
 
     }
@@ -178,23 +191,23 @@ main {
     .head {
         display: flex;
         width: 100%;
-        min-height: 110px;
+        // min-height: 110px;
 
         .heading {
             opacity: 0;
+            border-radius: 2px;
+            margin-bottom: 2rem;
+            text-shadow: -3px 1px 1px $dark;
             animation: back $anitime2 forwards $hold $anicurve2;
-            text-shadow: -1px .7px .5px $dark;
-            margin: 1rem .1rem 1.5rem .2rem;
-            background-color: $medium;
-            border: 4px solid $light;
+            padding: 1.5rem 1rem 1rem 1rem;
+            border: 4px solid $medium;
+            background-color: $drkmd;
             box-sizing: border-box;
             word-spacing: .06rem;
             line-height: 1.3rem;
             margin-right: auto;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             min-width: 50%;
-
-            padding: 1rem;
             color: $light;
         }
     }
@@ -206,17 +219,18 @@ main {
 
         .heading2 {
             opacity: 0;
-            animation: back $anitime2 forwards $hold2 $anicurve2;
-            margin: 15px 0 6px 2px;
-            word-spacing: .06rem;
-            line-height: 1.3rem;
-            margin-right: auto;
-            font-size: 1.1rem;
             min-width: 30%;
-            padding: .6rem;
+            font-size: 1.1rem;
+            margin-right: auto;
+            border-radius: 2px;
+            line-height: 1.3rem;
+            word-spacing: .06rem;
             box-sizing: border-box;
             background-color: $darkmed;
-            border: 4px solid $medlight;
+            margin-bottom: .8rem;
+            padding: .8rem .5rem .5rem .5rem;
+            animation: back $anitime2 forwards $hold2 $anicurve2;
+            border: 4px solid $medium;
             color: $light;
         }
     }
@@ -228,19 +242,18 @@ main {
 
         .heading3 {
             opacity: 0;
-            animation: back $anitime2 forwards $hold2 $anicurve2;
-            clip-path: polygon(100% 0, 100% 100%, 0 100%, 5% 85%, 5% 0);
-            margin: 15px 0 6px 4px;
-            word-spacing: .06rem;
-            line-height: 1.3rem;
-            margin-right: auto;
-            font-size: 1.1rem;
             min-width: 20%;
-            padding: .4rem .4rem .4rem 1rem;
-            box-sizing: border-box;
+            font-size: 1.1rem;
+            margin-right: auto;
+            line-height: 1.3rem;
+            word-spacing: .06rem;
+            margin-bottom: .8rem;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%, 5% 85%, 5% 0);
+            animation: back $anitime2 forwards $hold2 $anicurve2;
+            padding: .5rem .5rem .5rem 1rem;
             background-color: $medium;
-            border: 2px solid $medium;
-            color: $light;
+            box-sizing: border-box;
+            color: $dark;
         }
     }
 
@@ -257,9 +270,9 @@ main {
 form {
 
     padding: 1rem;
-    background-color: $medium;
-    border: 4px solid $medlight;
-    margin: 2rem;
+    background-color: $drkmd;
+    border: 4px solid $medium;
+    margin-bottom: 2rem;
 }
 
 #end {
@@ -301,13 +314,13 @@ form {
 
 
 .landing {
-    
+
     background-image: linear-gradient(to bottom, $darkmed, $dark);
     clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
     animation: landing $anitime forwards $anicurve;
     justify-content: center;
     align-items: start;
-    max-width: 768px;
+    max-width: $width;
     flex-wrap: wrap;
     margin: 0 auto;
     display: flex;
@@ -315,7 +328,7 @@ form {
 
 
     video {
-        
+
         clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
         width: 100%;
     }
@@ -330,96 +343,51 @@ form {
 
 
 pre {
-     opacity: 0;
-     animation: back $anitime2 forwards $hold2 $anicurve2;
+    opacity: 0;
+    animation: back $anitime2 forwards $hold2 $anicurve2;
 }
 
 .tagger {
-    transition:
-    background-color 150ms ease-in-out,
-    outline 150ms ease-in-out;
+    transition: background-image 150ms cubic-bezier(0, 0, 0.49, 1.16);
     animation: back $anitime2 forwards $hold2 $anicurve2;
-    border: 4px solid $medlight;
-    border-radius: 5px;
-    background-color: $medhi;
+    background-image: linear-gradient(to right, $drkmd 40%, $darkmed 70%);
+    box-shadow: 0 2px 1px $dark;
     box-sizing: border-box;
-    position: relative;
-    margin-right: auto;
-    margin-left: .2rem;
-    min-height: 70px;
+    margin: 0 0 .5rem 0;
+    border-radius: 2px;
     cursor: pointer;
     display: flex;
-    height: 6vh;
     width: 100%;
     opacity: 0;
 
 
     &:hover {
-        
         box-sizing: border-box;
-        border: 4px solid rgba(255, 255, 255, 0);
-        background-color: $dark;
-        
+        box-shadow: 0 1px 0 $dark;
+        background-image: linear-gradient(to right, $drkmd 30%, $darkmed 70%);
+
         a {
             color: $light;
-            text-shadow:none;
         }
-
     }
 
     a {
         width: 100%;
-        color: $dark;
         height: 100%;
         display: flex;
         padding: 1rem;
+        color: $medlight;
         font-size: 1.1rem;
         text-align: left;
-        text-shadow: .4px -.3px .6px $light;
+        text-shadow: -1.5px 1px 1px $dark;
         transition: color 150ms ease-in-out;
         text-decoration: none;
-        
+
     }
 
 }
-// .tagger {
-//     opacity: 0;
-//     animation: back $anitime2 forwards $hold2 $anicurve2;
-//     position: relative;
-//     box-sizing: border-box;
-//     transition:
-//         background-color 150ms ease-in-out,
-//         outline 150ms ease-in-out;
-//     background-color: $dark;
-//     margin-right: auto;
-//     margin-left: .2rem;
-//     cursor: pointer;
-//     display: flex;
-//     color: $light;
-//     height: 100%;
-//     width: 100%;
 
 
-//     &:hover {
-
-//         box-sizing: border-box;
-//         text-shadow: -1px .7px .3px $dark;
-//         background-color: $medium;
-//         outline: 4px solid $medlight;
-//         color: $light;
-//     }
-
-//     a {
-//         padding: 1rem;
-//         display: flex;
-//         text-align: left;
-//         height: 100%;
-//         width: 100%;
-//         color: $light;
-//         text-decoration: none;
-//     }
-
-// }
 
 .links {
     opacity: 0;
@@ -440,14 +408,16 @@ pre {
         align-items: flex-end;
         justify-content: center;
         transition: background-color 220ms ease-out;
-        clip-path: polygon(85% 7%, 85% 85%, 50% 100%, 15% 85%, 15% 7%);
+        filter: invert(20%);
+
+
+
 
         &:hover {
 
-            background-color: $light;
-
             img {
-                filter: invert(100%);
+                filter: invert(85%);
+
             }
         }
 
@@ -543,19 +513,21 @@ pre {
         transition: background-color 100ms ease-in;
 
         font-size: 1rem;
-        background-color: $light;
+        background-color: $drkmd;
+        outline: 4px solid $medium;
         font-family: $mainfont;
         border-radius: 0px;
         cursor: pointer;
         padding: .5rem;
+        color: $light;
         margin: .5rem;
         border: none;
         width: 50%;
 
         &:hover {
             box-sizing: border-box;
-            background-color: $darkmed;
             outline: 4px solid $medlight;
+            background-color: $darkmed;
             color: $light;
         }
     }
@@ -566,31 +538,30 @@ pre {
 #backs {
 
     a {
-        margin: 0;
         width: 100%;
         height: 100%;
-        color: $medium;
+        color: $medlight;
         font-size: 1rem;
         text-decoration: none;
-        transition: color 120ms ease-in;
         box-sizing: border-box;
+        display: block;
+        transition: color 120ms ease-in;
+        padding: .5rem;
+
 
     }
 
     opacity: 0;
-    padding: .4rem;
-    border: 3px solid $dark;
     border-radius: 2px;
-    background-color: $darkmed;
+    background-color: $drkmd;
+    box-shadow: 0 .5px .5px $dark;
     animation: back 500ms forwards 1s ease-in;
     transition: background-color 120ms ease-in;
-    box-sizing: border-box;
     margin: 5% 0 0 0;
 
     &:hover {
-        box-sizing: border-box;
         background-color: $dark;
-        border: 3px solid $medlight;
+
 
 
         a {
@@ -660,6 +631,7 @@ pre {
 
         opacity: 0;
     }
+
     40% {
         opacity: .2;
     }
@@ -687,7 +659,5 @@ pre {
     }
 
 
-    100% {
-        
-    }
+    100% {}
 }
