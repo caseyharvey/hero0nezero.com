@@ -94,7 +94,7 @@ main #fadetxt {
   height: 100%;
   position: fixed;
   text-align: center;
-  z-index: !important;
+  z-index: 5 !important;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
