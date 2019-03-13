@@ -1,5 +1,8 @@
+
+
+
 var cover = document.getElementById('cover');
-var mainw = document.getElementById('main');
+var mainw = document.querySelector('body');
 var cw ;
 function sizer () {
   
@@ -18,3 +21,6 @@ function sizer () {
 // sizer();
 setTimeout(sizer,200);
 window.onresize = sizer;
+window.addEventListener("orientationchange", function () {
+   sizer();
+}, false);
