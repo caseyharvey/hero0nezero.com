@@ -12,7 +12,11 @@ $medlight: rgb(212, 212, 212);
 $light: white;
 
 $anicurve: cubic-bezier(0.4, 0.5, 0.5, 1.1);
-$anitime: 1200ms;
+$anicurve2: cubic-bezier(0.99, 0.64, 0.42, 1);
+$anitime: 1000ms;
+$anitime2: 500ms;
+$hold: 500ms;
+$hold2: 1000ms;
 
 
 body {
@@ -20,14 +24,13 @@ body {
     height: auto;
     padding: 0;
     margin: 0;
-
 }
 
 .logo {
     transition: background-image 300ms ease-in-out;
     background-image: url('../img/header.png');
     background-position: top center;
-    animation: logo 1400ms ease-in;
+    animation: logo 1000ms ease-in;
     background-repeat: no-repeat;
     background-color: $light;
     background-size: contain;
@@ -142,7 +145,7 @@ main {
         z-index: -1;
     }
 
-  
+
 
     .aniback {
         animation: cover $anitime forwards $anicurve;
@@ -154,6 +157,8 @@ main {
     }
 
     .content {
+        opacity: 0;
+        animation: back $anitime2 forwards $hold2 $anicurve2;
         margin-top: .4rem;
         margin-bottom: 1rem;
         box-sizing: border-box;
@@ -173,6 +178,8 @@ main {
         width: 100%;
 
         .heading {
+            opacity: 0;
+            animation: back $anitime2 forwards $hold $anicurve2;
             text-shadow: -1px .7px .5px $dark;
             background-color: $medium;
             border: 4px solid $light;
@@ -195,6 +202,8 @@ main {
         width: 100%;
 
         .heading2 {
+            opacity: 0;
+            animation: back $anitime2 forwards $hold2 $anicurve2;
             margin: 15px 0 6px 2px;
             word-spacing: .06rem;
             line-height: 1.3rem;
@@ -215,6 +224,8 @@ main {
         width: 100%;
 
         .heading3 {
+            opacity: 0;
+            animation: back $anitime2 forwards $hold2 $anicurve2;
             clip-path: polygon(100% 0, 100% 100%, 0 100%, 5% 85%, 5% 0);
             margin: 15px 0 6px 4px;
             word-spacing: .06rem;
@@ -241,6 +252,7 @@ main {
 }
 
 form {
+
     padding: 1rem;
     background-color: $medium;
     border: 4px solid $medlight;
@@ -272,7 +284,7 @@ form {
             background-color: $medlight;
             outline: 4px solid $darkmed;
             transition: outline 150ms ease-in-out;
-            animation: back $anitime forwards 500ms $anicurve;
+            animation: back $anitime2 forwards $hold2 $anicurve2;
             opacity: 0;
 
             &:hover {
@@ -286,6 +298,7 @@ form {
 
 
 .landing {
+    
     background-image: linear-gradient(to bottom, $darkmed, $dark);
     clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
     animation: cover $anitime forwards $anicurve;
@@ -296,10 +309,9 @@ form {
     margin: 0 auto;
     display: flex;
     height: 80vh;
-    
+
     video {
-        opacity: 0;
-        animation: back $anitime forwards 500ms $anicurve;
+        
         clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
         width: 100%;
     }
@@ -309,13 +321,18 @@ form {
 .git {
     height: 5vh;
     max-height: 60px;
-    
+
 }
 
 
-
+pre {
+     opacity: 0;
+     animation: back $anitime2 forwards $hold2 $anicurve2;
+}
 
 .tagger {
+    opacity: 0;
+    animation: back $anitime2 forwards $hold2 $anicurve2;
     position: relative;
     box-sizing: border-box;
     transition:
@@ -353,6 +370,8 @@ form {
 }
 
 .links {
+    opacity: 0;
+    animation: back $anitime2 forwards $hold $anicurve2;
     justify-content: center;
     align-items: center;
     min-width: 300px;
@@ -390,6 +409,8 @@ form {
 }
 
 .contact {
+    opacity: 0;
+    animation: back $anitime2 forwards $hold2 $anicurve2;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -503,6 +524,7 @@ form {
         box-sizing: border-box;
 
     }
+
     opacity: 0;
     padding: .4rem;
     border: 3px solid $dark;
@@ -585,6 +607,9 @@ form {
     0% {
 
         opacity: 0;
+    }
+    40% {
+        opacity: .2;
     }
 
     100% {
