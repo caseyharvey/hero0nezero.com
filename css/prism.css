@@ -18,7 +18,7 @@ html {
 code[class*="language-"],
 pre[class*="language-"] {
 
-	color: white;
+	color: rgb(60, 152, 227);
 	overflow: scroll;
 	font-family: 'Share Tech Mono', monospace;
 	direction: ltr;
@@ -98,7 +98,7 @@ pre[class*="language-"] {
 .token.selector,
 .token.important,
 .token.atrule {
-	color: #b487fd;
+	color: #766fff;
 }
 
 .token.operator,
