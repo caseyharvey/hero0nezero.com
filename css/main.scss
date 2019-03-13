@@ -12,11 +12,12 @@ $medlight: rgb(212, 212, 212);
 $light: white;
 
 $anicurve: cubic-bezier(0.4, 0.5, 0.5, 1.1);
-$anicurve2: cubic-bezier(0.99, 0.64, 0.42, 1);
+$anicurve2: cubic-bezier(0.4, 0.5, 0.8, 1.2);
+// $anicurve2: cubic-bezier(0.99, 0.64, 0.42, 1);
 $anitime: 1000ms;
-$anitime2: 500ms;
+$anitime2: 300ms;
 $hold: 500ms;
-$hold2: 1000ms;
+$hold2: 700ms;
 
 
 body {
