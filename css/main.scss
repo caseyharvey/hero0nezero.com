@@ -8,6 +8,7 @@ $darkmed: rgb(48, 48, 48);
 $drkmd: rgb(70, 70, 70);
 $darkmedtrans: rgba(48, 48, 48, 0.5);
 $medium: rgb(122, 122, 122);
+$medhi: rgb(143, 143, 143);
 $medlight: rgb(212, 212, 212);
 $light: white;
 
@@ -169,7 +170,7 @@ main {
         flex-wrap: wrap;
         display: flex;
         color: $light;
-        padding: .4rem;
+        padding: .5rem;
         width: 100%;
 
     }
@@ -177,15 +178,16 @@ main {
     .head {
         display: flex;
         width: 100%;
+        min-height: 110px;
 
         .heading {
             opacity: 0;
             animation: back $anitime2 forwards $hold $anicurve2;
             text-shadow: -1px .7px .5px $dark;
+            margin: 1rem .1rem 1.5rem .2rem;
             background-color: $medium;
             border: 4px solid $light;
             box-sizing: border-box;
-            margin: 1rem .1rem 1.5rem .2rem;
             word-spacing: .06rem;
             line-height: 1.3rem;
             margin-right: auto;
@@ -333,43 +335,91 @@ pre {
 }
 
 .tagger {
-    opacity: 0;
-    animation: back $anitime2 forwards $hold2 $anicurve2;
-    position: relative;
-    box-sizing: border-box;
     transition:
-        background-color 150ms ease-in-out,
-        outline 150ms ease-in-out;
-    background-color: $dark;
+    background-color 150ms ease-in-out,
+    outline 150ms ease-in-out;
+    animation: back $anitime2 forwards $hold2 $anicurve2;
+    border: 4px solid $medlight;
+    border-radius: 5px;
+    background-color: $medhi;
+    box-sizing: border-box;
+    position: relative;
     margin-right: auto;
     margin-left: .2rem;
+    min-height: 70px;
     cursor: pointer;
     display: flex;
-    color: $light;
-    height: 100%;
+    height: 6vh;
     width: 100%;
+    opacity: 0;
 
 
     &:hover {
-
+        
         box-sizing: border-box;
-        text-shadow: -1px .7px .3px $dark;
-        background-color: $medium;
-        outline: 4px solid $medlight;
-        color: $light;
+        border: 4px solid rgba(255, 255, 255, 0);
+        background-color: $dark;
+        
+        a {
+            color: $light;
+            text-shadow:none;
+        }
+
     }
 
     a {
-        padding: 1rem;
-        display: flex;
-        text-align: left;
-        height: 100%;
         width: 100%;
-        color: $light;
+        color: $dark;
+        height: 100%;
+        display: flex;
+        padding: 1rem;
+        font-size: 1.1rem;
+        text-align: left;
+        text-shadow: .4px -.3px .6px $light;
+        transition: color 150ms ease-in-out;
         text-decoration: none;
+        
     }
 
 }
+// .tagger {
+//     opacity: 0;
+//     animation: back $anitime2 forwards $hold2 $anicurve2;
+//     position: relative;
+//     box-sizing: border-box;
+//     transition:
+//         background-color 150ms ease-in-out,
+//         outline 150ms ease-in-out;
+//     background-color: $dark;
+//     margin-right: auto;
+//     margin-left: .2rem;
+//     cursor: pointer;
+//     display: flex;
+//     color: $light;
+//     height: 100%;
+//     width: 100%;
+
+
+//     &:hover {
+
+//         box-sizing: border-box;
+//         text-shadow: -1px .7px .3px $dark;
+//         background-color: $medium;
+//         outline: 4px solid $medlight;
+//         color: $light;
+//     }
+
+//     a {
+//         padding: 1rem;
+//         display: flex;
+//         text-align: left;
+//         height: 100%;
+//         width: 100%;
+//         color: $light;
+//         text-decoration: none;
+//     }
+
+// }
 
 .links {
     opacity: 0;
