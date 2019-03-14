@@ -4,6 +4,7 @@ $subfont: 'Montserrat',
 sans-serif;
 
 $dark: rgb(0, 0, 0);
+$dark1: rgb(8, 8, 8);
 $dark2: rgb(30, 30, 30);
 $darkmed: rgb(48, 48, 48);
 $drkmd: rgb(70, 70, 70);
@@ -171,7 +172,7 @@ main {
         animation: cover $anitime forwards $anicurve;
         clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
         // background-color: $darkmed;
-        background-image: linear-gradient(to bottom, $darkmed, $dark2);
+        background-image: linear-gradient(to bottom, $darkmed, $dark1);
         max-width: $width;
         height: 0;
         width: 100%;
@@ -553,15 +554,14 @@ pre {
     }
    
     opacity: 0;
+    margin: 5% 0 0 0;
     border-radius: 2px;
-    background-color: $dark2;
-    box-shadow: 0 .5px $dark;
+    background-color: $dark1;
     animation: back 500ms forwards 1s ease-in;
     transition: background-color 120ms ease-in;
-    margin: 5% 0 0 0;
 
     &:hover {
-        background-color: $dark;
+
 
         a {
             color: $light;
@@ -636,7 +636,7 @@ pre {
     }
 
     100% {
-        opacity: 1;
+        opacity: .75;
     }
 }
 

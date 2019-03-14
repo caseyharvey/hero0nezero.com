@@ -9,7 +9,7 @@ function sizer () {
    if (cw !== mainw.clientWidth) {
 
       cover.classList.remove('aniback');
-      var main =  document.getElementById('main').scrollHeight +100;
+      var main =  document.getElementById('main').scrollHeight +200;
       cover.style.height = main + 'px';
       cover.classList.add('aniback');
       cw = mainw.clientWidth;
