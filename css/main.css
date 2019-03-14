@@ -101,8 +101,8 @@ header nav ul li:hover {
           box-sizing: border-box;
   -webkit-animation: navhov 200ms ease-in-out forwards;
           animation: navhov 200ms ease-in-out forwards;
-  background-color: #7a7a7a;
-  border: 2px solid #d4d4d4;
+  background-color: #464646;
+  border: 2px solid #7a7a7a;
 }
 
 header nav ul li:hover a {
@@ -166,7 +166,8 @@ main .aniback {
           animation: cover 1000ms forwards cubic-bezier(0.4, 0.5, 0.5, 1.1);
   -webkit-clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
           clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
-  background-color: #303030;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#303030), to(#1e1e1e));
+  background-image: linear-gradient(to bottom, #303030, #1e1e1e);
   max-width: 648px;
   height: 0;
   width: 100%;
@@ -358,6 +359,8 @@ form {
 }
 
 .landing video {
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
   -webkit-clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
           clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
   width: 100%;
@@ -457,17 +460,17 @@ pre {
           justify-content: center;
   -webkit-transition: background-color 220ms ease-out;
   transition: background-color 220ms ease-out;
-  -webkit-filter: invert(20%);
-          filter: invert(20%);
 }
 
 .links a:hover img {
-  -webkit-filter: invert(85%);
-          filter: invert(85%);
+  -webkit-filter: invert(0);
+          filter: invert(0);
 }
 
 .links a img {
   height: 70%;
+  -webkit-filter: invert(70%);
+          filter: invert(70%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-transition: -webkit-filter 220ms ease-out;
@@ -589,7 +592,7 @@ pre {
 #backs {
   opacity: 0;
   border-radius: 2px;
-  background-color: #464646;
+  background-color: #1e1e1e;
   -webkit-box-shadow: 0 0.5px 0.5px black;
           box-shadow: 0 0.5px 0.5px black;
   -webkit-animation: back 500ms forwards 1s ease-in;

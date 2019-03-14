@@ -4,6 +4,7 @@ $subfont: 'Montserrat',
 sans-serif;
 
 $dark: rgb(0, 0, 0);
+$dark2: rgb(30, 30, 30);
 $darkmed: rgb(48, 48, 48);
 $drkmd: rgb(70, 70, 70);
 $darkmedtrans: rgba(48, 48, 48, 0.5);
@@ -107,8 +108,8 @@ header {
                 &:hover {
                     box-sizing: border-box;
                     animation: navhov 200ms ease-in-out forwards;
-                    background-color: $medium;
-                    border: 2px solid $medlight;
+                    background-color: $drkmd;
+                    border: 2px solid $medium;
 
                     a {
                         box-sizing: border-box;
@@ -165,7 +166,8 @@ main {
 
         animation: cover $anitime forwards $anicurve;
         clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
-        background-color: $darkmed;
+        // background-color: $darkmed;
+        background-image: linear-gradient(to bottom, $darkmed, $dark2);
         max-width: $width;
         height: 0;
         width: 100%;
@@ -315,7 +317,7 @@ form {
 
 
 .landing {
-
+    
     background-image: linear-gradient(to bottom, $darkmed, $dark);
     clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
     animation: landing $anitime forwards $anicurve;
@@ -329,7 +331,7 @@ form {
 
 
     video {
-
+        filter: opacity(.3);
         clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
         width: 100%;
     }
@@ -409,7 +411,7 @@ pre {
         align-items: flex-end;
         justify-content: center;
         transition: background-color 220ms ease-out;
-        filter: invert(20%);
+
 
 
 
@@ -417,13 +419,13 @@ pre {
         &:hover {
 
             img {
-                filter: invert(85%);
-
+                filter: invert(0);
             }
         }
 
         img {
             height: 70%;
+            filter: invert(70%);
             box-sizing: border-box;
             transition: filter 220ms ease-out;
         }
@@ -559,7 +561,7 @@ pre {
 
     opacity: 0;
     border-radius: 2px;
-    background-color: $drkmd;
+    background-color: $dark2;
     box-shadow: 0 .5px .5px $dark;
     animation: back 500ms forwards 1s ease-in;
     transition: background-color 120ms ease-in;
