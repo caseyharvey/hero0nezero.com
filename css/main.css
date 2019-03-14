@@ -1,7 +1,6 @@
 body {
   background-color: black;
   font-family: "Share Tech Mono", sans-serif;
-  height: auto;
   padding: 0;
   margin: 0;
 }
@@ -142,6 +141,7 @@ header nav ul li a {
 }
 
 main {
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -163,6 +163,7 @@ main #cover {
 }
 
 main .aniback {
+  position: relative;
   -webkit-animation: cover 1000ms forwards cubic-bezier(0.4, 0.5, 0.5, 1.1);
           animation: cover 1000ms forwards cubic-bezier(0.4, 0.5, 0.5, 1.1);
   -webkit-clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
@@ -302,38 +303,28 @@ form {
 }
 
 .preview {
-  margin: .3rem;
   padding: 0;
   width: 100%;
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: relative;
 }
 
 .preview a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .preview a video {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #d4d4d4;
-  outline: 4px solid #303030;
-  -webkit-transition: outline 150ms ease-in-out;
-  transition: outline 150ms ease-in-out;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100vw;
+  max-width: 648px;
+  margin: 0 -15px;
   -webkit-animation: back 300ms forwards 700ms cubic-bezier(0.4, 0.5, 0.8, 1.2);
           animation: back 300ms forwards 700ms cubic-bezier(0.4, 0.5, 0.8, 1.2);
-  opacity: 0;
-}
-
-.preview a video:hover {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: 4px solid #d4d4d4;
+  -webkit-clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+          clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
 }
 
 .landing {
@@ -591,8 +582,8 @@ pre {
   opacity: 0;
   border-radius: 2px;
   background-color: #1e1e1e;
-  -webkit-box-shadow: 0 0.5px 0.5px black;
-          box-shadow: 0 0.5px 0.5px black;
+  -webkit-box-shadow: 0 0.5px black;
+          box-shadow: 0 0.5px black;
   -webkit-animation: back 500ms forwards 1s ease-in;
           animation: back 500ms forwards 1s ease-in;
   -webkit-transition: background-color 120ms ease-in;
@@ -603,7 +594,7 @@ pre {
 #backs a {
   width: 100%;
   height: 100%;
-  color: #d4d4d4;
+  color: #464646;
   font-size: 1rem;
   text-decoration: none;
   -webkit-box-sizing: border-box;

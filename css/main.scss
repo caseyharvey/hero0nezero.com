@@ -30,7 +30,6 @@ $width: 648px;
 body {
     background-color: $dark;
     font-family: $mainfont;
-    height: auto;
     padding: 0;
     margin: 0;
 }
@@ -150,6 +149,7 @@ header {
 }
 
 main {
+    position: relative;
     justify-content: center;
     box-sizing: border-box;
     max-width: $width;
@@ -157,16 +157,17 @@ main {
     flex-wrap: wrap;
     display: flex;
     margin: auto;
-
+    
     #cover {
         position: absolute;
         z-index: -1;
     }
-
-
-
+    
+    
+    
     .aniback {
-
+        
+        position: relative;
         animation: cover $anitime forwards $anicurve;
         clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
         // background-color: $darkmed;
@@ -289,33 +290,31 @@ form {
 }
 
 .preview {
-    margin: .3rem;
+    // margin: .3rem;
+
     padding: 0;
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
-
+    position: relative;
+    
+    
     a {
-        box-sizing: border-box;
-        height: 100%;
         width: 100%;
-
+        height: 100%;
+        
         video {
-            width: 100%;
-            box-sizing: border-box;
-            background-color: $medlight;
-            outline: 4px solid $darkmed;
-            transition: outline 150ms ease-in-out;
-            animation: back $anitime2 forwards $hold2 $anicurve2;
+            left: 0;
+            top: 0;
             opacity: 0;
-
-            &:hover {
-                box-sizing: border-box;
-                outline: 4px solid $medlight;
-            }
+            width: 100vw;
+            max-width: 648px;
+            margin: 0 -15px;
+            animation: back $anitime2 forwards $hold2 $anicurve2;
+            clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
         }
     }
 }
+
 
 
 
@@ -478,7 +477,6 @@ pre {
         margin: .5rem;
         resize: none;
         outline: none;
-        // border: none;
         width: 100%;
 
         &:focus {
@@ -501,7 +499,6 @@ pre {
         margin: .5rem;
         resize: none;
         outline: none;
-        // border: none;
         width: 100%;
 
         &:focus {
@@ -546,29 +543,25 @@ pre {
     a {
         width: 100%;
         height: 100%;
-        color: $medlight;
+        color: $drkmd;
         font-size: 1rem;
         text-decoration: none;
         box-sizing: border-box;
         display: block;
         transition: color 120ms ease-in;
         padding: .5rem;
-
-
     }
-
+   
     opacity: 0;
     border-radius: 2px;
     background-color: $dark2;
-    box-shadow: 0 .5px .5px $dark;
+    box-shadow: 0 .5px $dark;
     animation: back 500ms forwards 1s ease-in;
     transition: background-color 120ms ease-in;
     margin: 5% 0 0 0;
 
     &:hover {
         background-color: $dark;
-
-
 
         a {
             color: $light;
