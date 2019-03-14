@@ -273,6 +273,7 @@ form {
     background-color: $drkmd;
     border: 4px solid $medium;
     margin-bottom: 2rem;
+    border-radius: 2px;
 }
 
 #end {
@@ -442,22 +443,24 @@ pre {
     color: $light;
     padding: 1rem;
     width: 70%;
-
+    
     .emailtxt {
         font-size: 1rem;
+        border-radius: 2px;
         font-family: $mainfont;
+        border: 4px solid $drkmd;
         background-color: $medlight;
-        border-radius: 0px;
+        box-sizing: border-box;
         padding: .5rem;
         margin: .5rem;
-        border: none;
+        outline: none;
+        // border: none;
         width: 100%;
 
         &:focus {
-            outline: none;
-            box-sizing: border-box;
+
             background-color: $darkmed;
-            outline: 4px solid $medlight;
+            border: 4px solid $medlight;
             color: $light;
         }
 
@@ -469,18 +472,19 @@ pre {
         font-size: 1rem;
         font-family: $mainfont;
         background-color: $medlight;
-        border-radius: 0px;
+        border: 4px solid $drkmd;
+        border-radius: 2px;
         padding: .5rem;
         margin: .5rem;
         resize: none;
-        border: none;
+        outline: none;
+        // border: none;
         width: 100%;
 
         &:focus {
-            outline: none;
             box-sizing: border-box;
             background-color: $darkmed;
-            outline: 4px solid $medlight;
+            border: 4px solid $medlight;
             color: $light;
         }
 
@@ -491,18 +495,20 @@ pre {
         font-size: 1rem;
         font-family: $mainfont;
         background-color: $medlight;
-        border-radius: 0px;
+        border: 4px solid $drkmd;
+        border-radius: 2px;
         padding: .5rem;
         margin: .5rem;
         resize: none;
-        border: none;
+        outline: none;
+        // border: none;
         width: 100%;
 
         &:focus {
-            outline: none;
+
             box-sizing: border-box;
             background-color: $darkmed;
-            outline: 4px solid $medlight;
+            border: 4px solid $medlight;
             color: $light;
         }
 
@@ -510,24 +516,24 @@ pre {
     }
 
     .btn {
-        transition: background-color 100ms ease-in;
-
         font-size: 1rem;
-        background-color: $drkmd;
-        outline: 4px solid $medium;
+        border-radius: 2px;
+        box-sizing: border-box;
+        background-color: $darkmed;
+        transition: background-color 100ms ease-in;
+        border: 4px solid $medium;
         font-family: $mainfont;
-        border-radius: 0px;
         cursor: pointer;
         padding: .5rem;
-        color: $light;
+        color: $medlight;
         margin: .5rem;
-        border: none;
+        outline: none;
         width: 50%;
-
+        
         &:hover {
             box-sizing: border-box;
-            outline: 4px solid $medlight;
-            background-color: $darkmed;
+            border: 4px solid $medlight;
+            background-color: $dark;
             color: $light;
         }
     }
