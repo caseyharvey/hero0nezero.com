@@ -1,7 +1,7 @@
 // for port.html 
 
 // number of images in the gallery
-var listnum = 7;
+var listnum = 6;
 // number of images in the gallery
 
 // variables for DOM Elements
