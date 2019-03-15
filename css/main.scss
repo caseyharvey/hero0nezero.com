@@ -158,16 +158,16 @@ main {
     flex-wrap: wrap;
     display: flex;
     margin: auto;
-    
+
     #cover {
         position: absolute;
         z-index: -1;
     }
-    
-    
-    
+
+
+
     .aniback {
-        
+
         position: relative;
         animation: cover $anitime forwards $anicurve;
         clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
@@ -297,12 +297,12 @@ form {
     width: 100%;
     height: 100%;
     position: relative;
-    
-    
+
+
     a {
         width: 100%;
         height: 100%;
-        
+
         video {
             left: 0;
             top: 0;
@@ -320,7 +320,7 @@ form {
 
 
 .landing {
-    
+
     background-image: linear-gradient(to bottom, $darkmed, $dark);
     clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
     animation: landing $anitime forwards $anicurve;
@@ -347,11 +347,11 @@ pre {
 }
 
 .tagger {
-    transition: background-image 150ms cubic-bezier(0, 0, 0.49, 1.16);
+    transition: border 120ms cubic-bezier(0, 0, 0.49, 1.16);
     animation: back $anitime2 forwards $hold2 $anicurve2;
-    background-image: linear-gradient(to right, $drkmd 40%, $darkmed 70%);
-    box-shadow: 0 2px 1px $dark;
-    border-top: 1px solid $drkmd;
+    background: linear-gradient(to right, $drkmd 40%, $darkmed 70%);
+    border-top: 1.5px solid $drkmd;
+    border-bottom: 2px solid $dark2;
     box-sizing: border-box;
     margin: 0 0 .5rem 0;
     border-radius: 2px;
@@ -363,10 +363,10 @@ pre {
 
     &:hover {
         box-sizing: border-box;
-        box-shadow: 0 1px 0 $drkmd;
-        background-image: linear-gradient(to right, $dark2, $dark2);
-        border-top: 1px solid $dark;
-        
+        border-top: 1.5px solid $dark1;
+        border-bottom: 2px solid $darkmed;
+        background: linear-gradient(to right, $dark2, $dark2);
+
         a {
             color: $light;
         }
@@ -443,7 +443,7 @@ pre {
     color: $light;
     padding: 1rem;
     width: 70%;
-    
+
     .emailtxt {
         font-size: 1rem;
         border-radius: 2px;
@@ -527,7 +527,7 @@ pre {
         margin: .5rem;
         outline: none;
         width: 50%;
-        
+
         &:hover {
             box-sizing: border-box;
             border: 4px solid $medlight;
@@ -552,7 +552,7 @@ pre {
         transition: color 120ms ease-in;
         padding: .5rem;
     }
-   
+
     opacity: 0;
     margin: 5% 0 0 0;
     border-radius: 2px;
