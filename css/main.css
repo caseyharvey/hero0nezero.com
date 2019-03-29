@@ -26,14 +26,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
-  opacity: .85;
+  opacity: 0.85;
   height: 50px;
   width: 100%;
 }
 
 .logo:hover {
   background-image: url("../img/header-hover.png");
-  opacity: .85;
+  opacity: 0.85;
 }
 
 .logo a {
@@ -110,7 +110,7 @@ header nav ul li:hover a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-transform: uppercase;
-  word-spacing: .06rem;
+  word-spacing: 0.06rem;
   line-height: 1.3rem;
   margin-right: auto;
   font-size: 1.1rem;
@@ -168,8 +168,8 @@ main .aniback {
           animation: cover 1000ms forwards cubic-bezier(0.4, 0.5, 0.5, 1.1);
   -webkit-clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
           clip-path: polygon(768px 0, 100% 85%, 50% 100%, 0 85%, 0 0);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#303030), to(#141414));
-  background-image: linear-gradient(to bottom, #303030, #141414);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#303030), to(#1e1e1e));
+  background-image: linear-gradient(to bottom, #303030, #1e1e1e);
   max-width: 648px;
   height: 0;
   width: 100%;
@@ -184,7 +184,7 @@ main .content {
   -webkit-animation: back 300ms forwards 700ms cubic-bezier(0.4, 0.5, 0.8, 1.2);
           animation: back 300ms forwards 700ms cubic-bezier(0.4, 0.5, 0.8, 1.2);
   font-family: "Montserrat", sans-serif;
-  word-spacing: .06rem;
+  word-spacing: 0.06rem;
   font-size: 0.9rem;
   padding: 0.2rem;
   -ms-flex-wrap: wrap;
@@ -215,7 +215,7 @@ main .head .heading {
   background-color: #464646;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  word-spacing: .06rem;
+  word-spacing: 0.06rem;
   line-height: 1.3rem;
   margin-right: auto;
   font-size: 1.2rem;
@@ -224,6 +224,9 @@ main .head .heading {
 }
 
 main .head2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,47 +235,29 @@ main .head2 {
 
 main .head2 .heading2 {
   opacity: 0;
-  min-width: 30%;
+  min-width: 90%;
   font-size: 1.1rem;
-  margin-right: auto;
   border-radius: 2px;
-  line-height: 1.3rem;
-  word-spacing: .06rem;
+  margin-bottom: 0.8rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #303030;
-  margin-bottom: .8rem;
-  padding: .8rem .5rem .5rem .5rem;
+  padding: 0.8rem 0.5rem 0.5rem 0.8rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#464646), to(#1e1e1e));
+  background-image: linear-gradient(to right, #464646, #1e1e1e);
   -webkit-animation: back 300ms forwards 700ms cubic-bezier(0.4, 0.5, 0.8, 1.2);
           animation: back 300ms forwards 700ms cubic-bezier(0.4, 0.5, 0.8, 1.2);
-  border: 4px solid #7a7a7a;
+  border: 4px solid #464646;
   color: white;
 }
 
-main .head3 {
+main .head2 .heading2 .level {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-}
-
-main .head3 .heading3 {
-  opacity: 0;
-  min-width: 20%;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   margin-right: auto;
-  line-height: 1.3rem;
-  word-spacing: .06rem;
-  margin-bottom: .8rem;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 5% 85%, 5% 0);
-          clip-path: polygon(100% 0, 100% 100%, 0 100%, 5% 85%, 5% 0);
-  -webkit-animation: back 300ms forwards 700ms cubic-bezier(0.4, 0.5, 0.8, 1.2);
-          animation: back 300ms forwards 700ms cubic-bezier(0.4, 0.5, 0.8, 1.2);
-  padding: .5rem .5rem .5rem 1rem;
-  background-color: #7a7a7a;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: black;
+  margin-top: 0.5rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 main .img {
@@ -297,7 +282,7 @@ form {
 #end {
   margin: 10px 4px;
   width: 100%;
-  height: .1rem;
+  height: 0.1rem;
   background-image: -webkit-gradient(linear, left top, right top, from(#2c2c2c), color-stop(35%, white), color-stop(65%, white), to(#2c2c2c));
   background-image: linear-gradient(left, #2c2c2c 0%, white 35%, white 65%, #2c2c2c 100%);
 }
@@ -375,7 +360,7 @@ pre {
   border-bottom: 2px solid #1e1e1e;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 0 .5rem 0;
+  margin: 0 0 0.5rem 0;
   border-radius: 2px;
   cursor: pointer;
   display: -webkit-box;
@@ -488,6 +473,15 @@ pre {
   width: 70%;
 }
 
+.contact .myemail {
+  background-color: #303030;
+  border: 4px solid #464646;
+  border-radius: 2px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  width: 100%;
+}
+
 .contact .emailtxt {
   font-size: 1rem;
   border-radius: 2px;
@@ -496,8 +490,8 @@ pre {
   background-color: #d4d4d4;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: .5rem;
-  margin: .5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
   outline: none;
   width: 100%;
 }
@@ -514,8 +508,8 @@ pre {
   background-color: #d4d4d4;
   border: 4px solid #464646;
   border-radius: 2px;
-  padding: .5rem;
-  margin: .5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
   resize: none;
   outline: none;
   width: 100%;
@@ -535,8 +529,8 @@ pre {
   background-color: #d4d4d4;
   border: 4px solid #464646;
   border-radius: 2px;
-  padding: .5rem;
-  margin: .5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
   resize: none;
   outline: none;
   width: 100%;
@@ -561,9 +555,9 @@ pre {
   border: 4px solid #7a7a7a;
   font-family: "Share Tech Mono", sans-serif;
   cursor: pointer;
-  padding: .5rem;
+  padding: 0.5rem;
   color: #d4d4d4;
-  margin: .5rem;
+  margin: 0.5rem;
   outline: none;
   width: 50%;
 }
@@ -590,7 +584,7 @@ pre {
 #backs a {
   width: 100%;
   height: 100%;
-  color: #464646;
+  color: #7a7a7a;
   font-size: 1rem;
   text-decoration: none;
   -webkit-box-sizing: border-box;
@@ -598,7 +592,7 @@ pre {
   display: block;
   -webkit-transition: color 120ms ease-in;
   transition: color 120ms ease-in;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #backs:hover a {
@@ -607,7 +601,7 @@ pre {
 
 @media all {
   a {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -681,10 +675,10 @@ pre {
     opacity: 0;
   }
   40% {
-    opacity: .2;
+    opacity: 0.2;
   }
   100% {
-    opacity: .75;
+    opacity: 0.75;
   }
 }
 
@@ -693,10 +687,10 @@ pre {
     opacity: 0;
   }
   40% {
-    opacity: .2;
+    opacity: 0.2;
   }
   100% {
-    opacity: .75;
+    opacity: 0.75;
   }
 }
 

@@ -16,7 +16,7 @@ html {
 
 code[class*="language-"],
 pre[class*="language-"] {
-
+	font-size: .7rem;
 	color: rgb(60, 152, 227);
 	overflow: scroll;
 	font-family: 'Share Tech Mono', monospace;

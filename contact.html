@@ -1,81 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/zero-favi32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/zero-favi16.png"
+      sizes="16x16"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
 
-<head>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="img/zero-favi32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="img/zero-favi16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- css link -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-
+    <link
+      href="https://fonts.googleapis.com/css?family=Share+Tech+Mono"
+      rel="stylesheet"
+    />
 
     <title>hero0nezero</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- logo image -->
     <div class="logo"><a href="index.html"></a></div>
     <!-- header and nav -->
     <header>
-        <nav>
-            <ul class="nav">
-                <li><a class="tabs" href="projects.html">projects</a></li>
-                <li><a class="tabs" href="workshop.html">workshop</a></li>
-                <li><a class="tabs" href="contact.html">contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul class="nav">
+          <li><a class="tabs" href="projects.html">projects</a></li>
+          <li><a class="tabs" href="skills.html">skills</a></li>
+          <li><a class="tabs" href="contact.html">contact</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- main content -->
     <main id="main">
-        <!-- dynamic background image -->
-        <div id="cover"></div>
-        <!-- heading -->
-        <div class="head">
-            <div class="heading">
-                contact
-            </div>
+      <!-- dynamic background image -->
+      <div id="cover"></div>
+      <!-- heading -->
+      <div class="head">
+        <div class="heading">
+          contact
         </div>
-        <!-- -->
-        <!-- links to relivant accounts -->
+      </div>
+      <!-- -->
+      <!-- links to relevant accounts -->
 
-
-        <form method="POST" action="https://formspree.io/caseyharvey1@gmail.com" class="contact">
-
-            <input type="email" class="emailtxt" name='email' placeholder="your-email@example.com">
-
-            <textarea type='text' name='subject' class="subtxt" rows="1" placeholder="subject"></textarea>
-
-            <textarea type='text' class="msgtxt" name='message' rows="6" placeholder="message"></textarea>
-
-            <button type="submit" class="btn">submit</button>
-        </form>
-        <div class="links">
-            <a href="https://www.codewars.com/users/hero0nezero" target="_blank"><img src="img/icons/cw.png" alt="codewars icon"></a>
-            <a href="https://github.com/hero0nezero" target="_blank"><img src="img/icons/gh.png" alt="github icon"></a>
-            <a href="https://stackoverflow.com/users/10593964/hero0nezero" target="_blank"><img src="img/icons/so.png"
-                    alt="stack overflow icon"></a>
+      <form
+        method="POST"
+        action="https://formspree.io/caseyharvey1@gmail.com"
+        class="contact"
+      >
+        <div class="myemail">
+          contact@caseyonline.space
         </div>
+        <input
+          type="email"
+          class="emailtxt"
+          name="email"
+          placeholder="your-email@example.com"
+        />
 
+        <textarea
+          type="text"
+          name="subject"
+          class="subtxt"
+          rows="1"
+          placeholder="subject"
+        ></textarea>
+
+        <textarea
+          type="text"
+          class="msgtxt"
+          name="message"
+          rows="6"
+          placeholder="message"
+        ></textarea>
+
+        <button type="submit" class="btn">submit</button>
+      </form>
+      <div class="links">
+        <a href="https://www.codewars.com/users/hero0nezero" target="_blank"
+          ><img src="img/icons/cw.png" alt="codewars icon"
+        /></a>
+        <a href="https://github.com/hero0nezero" target="_blank"
+          ><img src="img/icons/gh.png" alt="github icon"
+        /></a>
+        <a
+          href="https://stackoverflow.com/users/10593964/hero0nezero"
+          target="_blank"
+          ><img src="img/icons/so.png" alt="stack overflow icon"
+        /></a>
+      </div>
     </main>
-
-
 
     <!-- js links -->
     <script src="app.js"></script>
-
-</body>
-
+  </body>
 </html>
